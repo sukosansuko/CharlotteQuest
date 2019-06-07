@@ -1,0 +1,48 @@
+﻿;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+;[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+[chara_new name="シャルロット" storage="シャルロット" tag = "chara" layer=Default sort=1 jname = "シャルロット" x=-3.5 scale_x=-1]
+
+[chara_new name="カーラ" storage="カーラ" tag = "chara" layer=Default sort=1 jname = "カーラ" x=-0.5 scale_x=-1]
+
+[chara_new name="ターナー" storage="ターナー" tag = "chara" layer=Default sort=1 jname = "ターナー" x=3]
+
+[bg_new storage="遺跡1"]
+[bg_show storage="遺跡1"]
+[chara_show tag = "chara"]
+[playse storage="剣1"]
+#ターナー
+ば、馬鹿な......[r]
+この私がこんな小娘風情に負けるだと............！？[p]
+
+#シャルロット
+女だと思って甘く見たのが運の尽きね！[p]
+
+#ターナー
+ふむ、ここは引こう...[r]
+だが、財宝を狙っているのは君たちだけではないということを[r]
+覚えておきたまえ！[p]
+[playse storage="逃げる"]
+[chara_remove name = "ターナー"]
+
+#シャルロット
+あっ！逃げた！！[p]
+
+#カーラ
+あのおじさんのことも気になるけど、とりあえず今日はもう帰ろう？[l][r]
+願いが叶うっていうお宝はここじゃないみたいだし。[p]
+
+#シャルロット
+う～ん......それもそうね。[r]
+おなかすいたし、帰りましょ。[p]
+
+[scene file = "W1"]

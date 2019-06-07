@@ -1,0 +1,81 @@
+﻿;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+;[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+[chara_new name="シャルロット" storage="シャルロット" layer=Default sort=1 jname = "シャルロット" tag = 1 x = -4.5 scale_x = -1]
+[chara_new name="カーラ" storage="カーラ" layer=Default sort=1 jname = "カーラ" tag = 1 x = -1.5 scale_x = -1]
+[chara_new name="リリー" storage="リリー" layer=Default sort=1 jname = "リリー" tag = 1 x = 4.5 ]
+[chara_new name="エリザ" storage="エリザ" layer=Default sort=1 jname = "エリザ" tag = 2 x = 20 sort = 1]
+[chara_new name="ディアナ" storage="ディアナ" layer=Default sort=1 jname = "ディアナ" tag = 1 x = 1.5]
+[chara_new name="ゴブリン1" storage="ゴブリン1" layer=Default sort=1 jname = "ゴブリン1" tag = 3 x = 3 y = -1]
+[chara_new name="ゴブリン2" storage="ゴブリン2" layer=Default sort=1 jname = "ゴブリン2" tag = 3 x = 4 y = -1]
+[chara_new name="ゴブリン3" storage="ゴブリン3" layer=Default sort=1 jname = "ゴブリン3" tag = 3 x = 2 y = -1]
+[bg_new storage="洞窟"]
+[bg_show storage="洞窟"]
+
+[show tag = 1]
+
+#シャルロット
+や、やっと奥まで着いたわね......[p]
+
+#カーラ
+私もへとへとだよ...[p]
+
+#リリー
+長かったね～[p]
+
+#シャルロット
+何であんたそんな元気なのよ...[p]
+
+#リリー
+だって魔物もそんなに強くなかったし、[r]
+ホラ、私って強いから☆[p]
+
+#シャルロット
+「強くなかった」って...[l][r]
+今までの魔物と違って全然ダメージ受けてないように見えたんだけど？[p]
+
+#ディアナ
+やっぱり私の勘は正しかった[r]
+きっとここの魔物は物理耐性がある[p]
+
+#カーラ
+ディアナちゃんの言ってることがホントにわかんないよ...[p]
+
+[chara_hide name = "リリー" wait = false time = 0.3]
+[chara_hide name = "ディアナ" time = 0.3]
+
+[show tag = 3 time = 0.2]
+
+#魔物
+グオオオオオオォォォォ！！！！！[p]
+
+[show tag = 2 time = 0]
+
+#？？？
+危ないッ！！[p]
+
+[anim name = "エリザ" x = 3.5 time = 0.5][l]
+
+[chara_hide tag = 3 wait = false time = 0.1]
+
+#シャルロット
+っ！！[p]
+
+#カーラ
+エ、エリザちゃん！？[l][r]
+どうしてここに...[p]
+
+#エリザ
+話は後！！[l][r]
+とにかくこいつらを蹴散らすわよ！！[p]
+
+[scene file = "W4"]

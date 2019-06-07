@@ -1,0 +1,100 @@
+﻿;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+;[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+[chara_new name = シャルロット storage = シャルロット layer=Default sort=1 jname = シャルロット x = -4.5 tag = 1  scale_x = -1]
+[chara_new name = エリザ storage = エリザ layer=Default sort=1 jname = エリザ x = -2.5 tag = 1]
+[chara_new name = カーラ storage = カーラ layer=Default sort=1 jname = カーラ x = 3 tag = 1]
+[chara_new name = リリー storage = リリー layer=Default sort=1 jname = リリー x = 1 tag = 2 scale_x = -1]
+[chara_new name = ディアナ storage = ディアナ layer=Default sort=1 jname = ディアナ x = 3.5 tag = 2]
+[bg_new storage="洞窟"]
+[bg_show storage="洞窟"]
+[show tag = 1]
+
+#シャルロット
+えっと...ありがとうエリザ[r]
+助かったわ[p]
+
+#エリザ
+どういたしまして[l][r]
+で、あたしが何を言いたいかわかるわよね？[p]
+
+#シャルロット
+えっと...？[p]
+
+#エリザ
+カーラになんて危ないことさせてるのよ！！！[p]
+
+#シャルロット
+悪かったわよ、でもそんなに言うことないじゃない...[p]
+
+#カーラ
+エ、エリザちゃん...そこまで言わなくても...[l][r]
+それに、これは私もシャルちゃんと一緒にいたくてついて行ってるから......[p]
+
+[anim name = エリザ time = 0.5 wait = false x = 1.5 scale_x = -1]
+
+#エリザ
+あんたのそういう無駄に面倒見がいいところが心配なの！！[p]
+いっつもそうじゃない！[r]
+シャルについて行ってはケガして帰ってきて！！[p]
+いっつもあたしがどれだけ心配してると思ってるの！！！！[cm]
+
+[chara_hide tag = 1 time = 0.5]
+[show tag = 2 time = 0.3]
+
+#リリー
+確かにあれは保護者だね[l][r]
+保護者というか、メチャクチャ過保護なお母さんってカンジだけど[p]
+ね、ディアナちゃんもそう思わない？？[p]
+
+#ディアナ
+私には「お母さん」がよくわからないけど、親が子どもを心配するというのは見てきた[p]
+...エリザはカーラの「お母さん」というものなの？[p]
+
+#エリザ
+ちょっと聞いてるのカーラ！！！[p]
+
+#カーラ
+うぅ...だからごめんなさいってばぁ！[p]
+
+#リリー
+う～ん......[r]
+お母さんとはちょっと違うと思うけど、友達だからやっぱり心配になっちゃうんだろうね☆[p]
+
+#ディアナ
+...友達...[p]
+私とみんなは友達なの[p]
+
+#リリー
+あったりまえだよ☆[l][r]
+私とディアナちゃんは友達！！[p]
+
+#シャルロット
+もう分かったってば！！！[l][r]
+今度からは気を付けるからそれでいいでしょ！！[p]
+ほら！[r]
+そこ2人！　早くいくわよ！！[p]
+
+
+#
+...[p]
+......[p]
+.........[p]
+シャルロットは果たして肌年齢を下げることができるのか！？[l][r]
+そしてディアナが封印されていた本当の理由が発覚ッ！！[p]
+衝撃の展開に涙が止まらない..................[p]
+しゃるクエ！ 体験版[l][r]
+[r][r]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　～終わり～[p]
+
+[scene file = "ホーム"]

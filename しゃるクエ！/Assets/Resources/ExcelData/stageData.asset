@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0989beb0f0128354baf2e5e157c866e8, type: 3}
+  m_Name: stageData
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: Sheet1
+    list:
+    - stage: 11
+      enemy_count: 3
+      extra: 
+      enemy1: 1
+      enemy2: 2
+      enemy3: 6
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 1
+      EXP: 100
+    - stage: 12
+      enemy_count: 3
+      extra: 
+      enemy1: 1
+      enemy2: 2
+      enemy3: 6
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 1
+      EXP: 150
+    - stage: 13
+      enemy_count: 1
+      extra: BOSS
+      enemy1: 7
+      enemy2: 0
+      enemy3: 0
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 1
+      EXP: 300
+    - stage: 21
+      enemy_count: 3
+      extra: 
+      enemy1: 1
+      enemy2: 6
+      enemy3: 3
+      enemy4: 4
+      enemy5: 5
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 200
+    - stage: 22
+      enemy_count: 3
+      extra: 
+      enemy1: 1
+      enemy2: 6
+      enemy3: 3
+      enemy4: 4
+      enemy5: 5
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 300
+    - stage: 23
+      enemy_count: 3
+      extra: 
+      enemy1: 1
+      enemy2: 6
+      enemy3: 3
+      enemy4: 4
+      enemy5: 5
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 400
+    - stage: 24
+      enemy_count: 1
+      extra: BOSS
+      enemy1: 8
+      enemy2: 0
+      enemy3: 0
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 800
+    - stage: 31
+      enemy_count: 3
+      extra: 
+      enemy1: 9
+      enemy2: 10
+      enemy3: 11
+      enemy4: 13
+      enemy5: 14
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 700
+    - stage: 32
+      enemy_count: 3
+      extra: 
+      enemy1: 9
+      enemy2: 10
+      enemy3: 11
+      enemy4: 13
+      enemy5: 14
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 800
+    - stage: 33
+      enemy_count: 3
+      extra: 
+      enemy1: 9
+      enemy2: 10
+      enemy3: 11
+      enemy4: 13
+      enemy5: 14
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 900
+    - stage: 34
+      enemy_count: 3
+      extra: 
+      enemy1: 9
+      enemy2: 10
+      enemy3: 11
+      enemy4: 13
+      enemy5: 14
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 1000
+    - stage: 35
+      enemy_count: 1
+      extra: BOSS
+      enemy1: 15
+      enemy2: 0
+      enemy3: 0
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 2000
+    - stage: 41
+      enemy_count: 3
+      extra: 
+      enemy1: 13
+      enemy2: 14
+      enemy3: 16
+      enemy4: 17
+      enemy5: 18
+      enemy6: 19
+      enemy7: 20
+      enemy8: 21
+      BGM: 2
+      EXP: 1500
+    - stage: 42
+      enemy_count: 3
+      extra: 
+      enemy1: 13
+      enemy2: 14
+      enemy3: 16
+      enemy4: 17
+      enemy5: 18
+      enemy6: 19
+      enemy7: 20
+      enemy8: 21
+      BGM: 2
+      EXP: 1600
+    - stage: 43
+      enemy_count: 3
+      extra: 
+      enemy1: 13
+      enemy2: 14
+      enemy3: 16
+      enemy4: 17
+      enemy5: 18
+      enemy6: 19
+      enemy7: 20
+      enemy8: 21
+      BGM: 2
+      EXP: 1700
+    - stage: 44
+      enemy_count: 3
+      extra: 
+      enemy1: 13
+      enemy2: 14
+      enemy3: 16
+      enemy4: 17
+      enemy5: 18
+      enemy6: 19
+      enemy7: 20
+      enemy8: 21
+      BGM: 2
+      EXP: 1800
+    - stage: 45
+      enemy_count: 3
+      extra: 
+      enemy1: 13
+      enemy2: 14
+      enemy3: 16
+      enemy4: 17
+      enemy5: 18
+      enemy6: 19
+      enemy7: 20
+      enemy8: 21
+      BGM: 2
+      EXP: 1900
+    - stage: 46
+      enemy_count: 1
+      extra: BOSS
+      enemy1: 22
+      enemy2: 0
+      enemy3: 0
+      enemy4: 0
+      enemy5: 0
+      enemy6: 0
+      enemy7: 0
+      enemy8: 0
+      BGM: 2
+      EXP: 4000

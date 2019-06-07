@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6dc52464824cf344b5118609014bc09, type: 3}
+  m_Name: playerGrow
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: Sheet1
+    list:
+    - ID: 1
+      Name: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      GROWHP: 42
+      GROWSP: 4
+      GROWATK: 9
+      GROWDEF: 3
+      GROWSPD: 1
+      GROWMAT: 1
+      GROWMDF: 3
+      GROWLUK: 6
+    - ID: 2
+      Name: "\u30AB\u30FC\u30E9"
+      GROWHP: 33
+      GROWSP: 9
+      GROWATK: 3
+      GROWDEF: 3
+      GROWSPD: 1
+      GROWMAT: 8
+      GROWMDF: 4
+      GROWLUK: 4
+    - ID: 3
+      Name: "\u30C7\u30A3\u30A2\u30CA"
+      GROWHP: 60
+      GROWSP: 3
+      GROWATK: 6
+      GROWDEF: 3
+      GROWSPD: 1
+      GROWMAT: 1
+      GROWMDF: 3
+      GROWLUK: 4
+    - ID: 4
+      Name: "\u30EA\u30EA\u30FC"
+      GROWHP: 32
+      GROWSP: 8
+      GROWATK: 1
+      GROWDEF: 3
+      GROWSPD: 1
+      GROWMAT: 9
+      GROWMDF: 3
+      GROWLUK: 5
+    - ID: 5
+      Name: "\u30A8\u30EA\u30B6"
+      GROWHP: 44
+      GROWSP: 7
+      GROWATK: 4
+      GROWDEF: 3
+      GROWSPD: 1
+      GROWMAT: 7
+      GROWMDF: 3
+      GROWLUK: 5
+    - ID: 6
+      Name: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      GROWHP: 55
+      GROWSP: 7
+      GROWATK: 7
+      GROWDEF: 4
+      GROWSPD: 1
+      GROWMAT: 8
+      GROWMDF: 3
+      GROWLUK: 2

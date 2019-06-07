@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be953bba2c37a543bd5a30d14bd1c75, type: 3}
+  m_Name: EXP_List
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: Sheet1
+    list:
+    - CurrentLV: 1
+      TotalExp: 100
+    - CurrentLV: 2
+      TotalExp: 206
+    - CurrentLV: 3
+      TotalExp: 318
+    - CurrentLV: 4
+      TotalExp: 437
+    - CurrentLV: 5
+      TotalExp: 563
+    - CurrentLV: 6
+      TotalExp: 697
+    - CurrentLV: 7
+      TotalExp: 839
+    - CurrentLV: 8
+      TotalExp: 989
+    - CurrentLV: 9
+      TotalExp: 1149
+    - CurrentLV: 10
+      TotalExp: 1318
+    - CurrentLV: 11
+      TotalExp: 1497
+    - CurrentLV: 12
+      TotalExp: 1686
+    - CurrentLV: 13
+      TotalExp: 1888
+    - CurrentLV: 14
+      TotalExp: 2101
+    - CurrentLV: 15
+      TotalExp: 2327
+    - CurrentLV: 16
+      TotalExp: 2567
+    - CurrentLV: 17
+      TotalExp: 2821
+    - CurrentLV: 18
+      TotalExp: 3090
+    - CurrentLV: 19
+      TotalExp: 3375
+    - CurrentLV: 20
+      TotalExp: 3678
+    - CurrentLV: 21
+      TotalExp: 3999
+    - CurrentLV: 22
+      TotalExp: 4339
+    - CurrentLV: 23
+      TotalExp: 4699
+    - CurrentLV: 24
+      TotalExp: 5081
+    - CurrentLV: 25
+      TotalExp: 5486
+    - CurrentLV: 26
+      TotalExp: 5915
+    - CurrentLV: 27
+      TotalExp: 6370
+    - CurrentLV: 28
+      TotalExp: 6852
+    - CurrentLV: 29
+      TotalExp: 7363
+    - CurrentLV: 30
+      TotalExp: 7905
+    - CurrentLV: 31
+      TotalExp: 8480
+    - CurrentLV: 32
+      TotalExp: 9088
+    - CurrentLV: 33
+      TotalExp: 9734
+    - CurrentLV: 34
+      TotalExp: 10418
+    - CurrentLV: 35
+      TotalExp: 11143
+    - CurrentLV: 36
+      TotalExp: 11912
+    - CurrentLV: 37
+      TotalExp: 12726
+    - CurrentLV: 38
+      TotalExp: 13590
+    - CurrentLV: 39
+      TotalExp: 14505
+    - CurrentLV: 40
+      TotalExp: 15476
+    - CurrentLV: 41
+      TotalExp: 16504
+    - CurrentLV: 42
+      TotalExp: 17595
+    - CurrentLV: 43
+      TotalExp: 18750
+    - CurrentLV: 44
+      TotalExp: 19975
+    - CurrentLV: 45
+      TotalExp: 21274
+    - CurrentLV: 46
+      TotalExp: 22650
+    - CurrentLV: 47
+      TotalExp: 24109
+    - CurrentLV: 48
+      TotalExp: 25656
+    - CurrentLV: 49
+      TotalExp: 27295
+    - CurrentLV: 50
+      TotalExp: 29033
+    - CurrentLV: 51
+      TotalExp: 30875
+    - CurrentLV: 52
+      TotalExp: 32828
+    - CurrentLV: 53
+      TotalExp: 34897
+    - CurrentLV: 54
+      TotalExp: 37091
+    - CurrentLV: 55
+      TotalExp: 39417
+    - CurrentLV: 56
+      TotalExp: 41882
+    - CurrentLV: 57
+      TotalExp: 44495
+    - CurrentLV: 58
+      TotalExp: 47264
+    - CurrentLV: 59
+      TotalExp: 50200
+    - CurrentLV: 60
+      TotalExp: 53312
+    - CurrentLV: 61
+      TotalExp: 56611
+    - CurrentLV: 62
+      TotalExp: 60108
+    - CurrentLV: 63
+      TotalExp: 63814
+    - CurrentLV: 64
+      TotalExp: 67743
+    - CurrentLV: 65
+      TotalExp: 71908
+    - CurrentLV: 66
+      TotalExp: 76322
+    - CurrentLV: 67
+      TotalExp: 81002
+    - CurrentLV: 68
+      TotalExp: 85962
+    - CurrentLV: 69
+      TotalExp: 91220
+    - CurrentLV: 70
+      TotalExp: 96793
+    - CurrentLV: 71
+      TotalExp: 102700
+    - CurrentLV: 72
+      TotalExp: 108962
+    - CurrentLV: 73
+      TotalExp: 115600
+    - CurrentLV: 74
+      TotalExp: 122636
+    - CurrentLV: 75
+      TotalExp: 130094
+    - CurrentLV: 76
+      TotalExp: 138000
+    - CurrentLV: 77
+      TotalExp: 146380
+    - CurrentLV: 78
+      TotalExp: 155263
+    - CurrentLV: 79
+      TotalExp: 164679
+    - CurrentLV: 80
+      TotalExp: 174659
+    - CurrentLV: 81
+      TotalExp: 185239
+    - CurrentLV: 82
+      TotalExp: 196453
+    - CurrentLV: 83
+      TotalExp: 208341
+    - CurrentLV: 84
+      TotalExp: 220941
+    - CurrentLV: 85
+      TotalExp: 234298
+    - CurrentLV: 86
+      TotalExp: 248456
+    - CurrentLV: 87
+      TotalExp: 263463
+    - CurrentLV: 88
+      TotalExp: 279371
+    - CurrentLV: 89
+      TotalExp: 296233
+    - CurrentLV: 90
+      TotalExp: 314107
+    - CurrentLV: 91
+      TotalExp: 333053
+    - CurrentLV: 92
+      TotalExp: 353137
+    - CurrentLV: 93
+      TotalExp: 374425
+    - CurrentLV: 94
+      TotalExp: 396990
+    - CurrentLV: 95
+      TotalExp: 420910
+    - CurrentLV: 96
+      TotalExp: 446265
+    - CurrentLV: 97
+      TotalExp: 473140
+    - CurrentLV: 98
+      TotalExp: 501629
+    - CurrentLV: 99
+      TotalExp: 531827

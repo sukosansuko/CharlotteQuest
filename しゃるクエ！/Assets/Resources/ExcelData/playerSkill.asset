@@ -1,0 +1,884 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bb03c51928b6245ab398f7b01e357f, type: 3}
+  m_Name: playerSkill
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: playerSkill
+    list:
+    - ID: 1
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8\u3001\u30C7\u30A3\u30A2\u30CA\u3001\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u653B\u6483"
+      effectName: "\u901A\u5E38\u653B\u6483(\u7269\u7406)"
+      Lv: 1
+      power: 1
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 0
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u901A\u5E38\u653B\u6483(\u7269\u7406)"
+      etc: nothing
+    - ID: 2
+      charName: "\u30AB\u30FC\u30E9\u3001\u30EA\u30EA\u30FC\u3001\u30A8\u30EA\u30B6"
+      skillName: "\u653B\u6483"
+      effectName: "\u901A\u5E38\u653B\u6483(\u9B54\u6CD5)"
+      Lv: 1
+      power: 1
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 0
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u901A\u5E38\u653B\u6483(\u9B54\u6CD5)"
+      etc: nothing
+    - ID: 3
+      charName: "\u5168\u54E1"
+      skillName: "\u9632\u5FA1"
+      effectName: "\u30D7\u30ED\u30C6\u30AF\u30C8"
+      Lv: 1
+      power: 1
+      target: P0
+      useChara: Attack
+      hpCtl: 0
+      attackType: 0
+      sp: -30
+      period: 2
+      influence1: DEF
+      influence2: MDF
+      Time: "\u4E2D"
+      effect: "\u8EAB\u3092\u5B88\u308A\u3001SP\u3092\u5C11\u3057\u56DE\u5FA9\u3059\u308B"
+      etc: nothing
+    - ID: 4
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u706B\u708E\u65AC"
+      effectName: "\u901A\u5E38\u653B\u6483(\u7269\u7406)"
+      Lv: 1
+      power: 1.2
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 15
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u708E\u3092\u307E\u3068\u3063\u3066\u653B\u6483"
+      etc: "\u30D5\u30A1\u30A4\u30A2\u5C5E\u6027"
+    - ID: 5
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u96BC\u5207\u308A"
+      effectName: "\u901A\u5E38\u653B\u6483(\u7269\u7406)"
+      Lv: 15
+      power: 1
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 18
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u7D20\u65E9\u304F\u653B\u6483"
+      etc: nothing
+    - ID: 6
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u6368\u3066\u8EAB"
+      effectName: "\u901A\u5E38\u653B\u6483(\u7269\u7406)"
+      Lv: 18
+      power: 1.8
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 8
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u7121"
+      effect: "\u5B88\u308A\u3092\u6368\u3066\u3066\u6575\u5358\u4F53\u306B\u653B\u6483"
+      etc: "\u3053\u306E\u30BF\u30FC\u30F3\u306F\u5B88\u5099\u529B0\u3068\u3059\u308B"
+    - ID: 7
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u56DE\u8EE2\u5207\u308A"
+      effectName: "\u7206\u767A3"
+      Lv: 22
+      power: 0.9
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 15
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u5168\u4F53\u3092\u653B\u6483"
+      etc: nothing
+    - ID: 8
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u30B7\u30E3\u30A4\u30CB\u30F3\u30B0\u306A\u3093\u3061\u3083\u3089"
+      effectName: "\u30B7\u30E3\u30A4\u30CB\u30F3\u30B0\u306A\u3093\u3061\u3083\u3089"
+      Lv: 34
+      power: 1.5
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 22
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u9577"
+      effect: "\u8056\u306A\u308B\u529B\u3092\u7E8F\u3044\u5358\u4F53\u306B\u653B\u6483"
+      etc: nothing
+    - ID: 9
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u7149\u7344\u65AC"
+      effectName: "\u7149\u7344\u65AC"
+      Lv: 45
+      power: 1.2
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 20
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u5168\u4F53\u306B\u7149\u7344\u306E\u708E\u3092\u7E8F\u653B\u6483"
+      etc: "\u30D5\u30A1\u30A4\u30A2\u5C5E\u6027"
+    - ID: 10
+      charName: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      skillName: "\u30A8\u30AF\u30B9\u30AB\u30EA\u30D0\u30FC"
+      effectName: "\u7149\u7344\u65AC"
+      Lv: 81
+      power: 2
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 55
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u5168\u4F53\u3092\u8056\u5263\u3067\u306A\u304E\u306F\u3089\u3046"
+      etc: nothing
+    - ID: 11
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30AD\u30E5\u30A2"
+      effectName: "\u56DE\u5FA9"
+      Lv: 1
+      power: 0.3
+      target: P1
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 10
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u3092\u5C11\u3057\u7652\u3059"
+      etc: nothing
+    - ID: 12
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30D7\u30ED\u30C6\u30AF\u30C8"
+      effectName: "\u30D7\u30ED\u30C6\u30AF\u30C8"
+      Lv: 8
+      power: 0.1
+      target: P1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 30
+      period: 3
+      influence1: DEF
+      influence2: MDF
+      Time: "\u4E2D"
+      effect: "\u6575\u306E\u653B\u6483\u309210\uFF05\u30AB\u30C3\u30C8"
+      etc: "\u5358\u4F53"
+    - ID: 13
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30D2\u30FC\u30EB"
+      effectName: "\u56DE\u5FA9"
+      Lv: 15
+      power: 0.3
+      target: P3
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 30
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u5473\u65B9\u5168\u4F53\u308F\u305A\u304B\u306B\u7652\u3059"
+      etc: nothing
+    - ID: 14
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30E1\u30AC\u30AD\u30E5\u30A2"
+      effectName: "\u56DE\u5FA9"
+      Lv: 21
+      power: 0.5
+      target: P1
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 25
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u3092\u5C11\u3057\u7652\u3059"
+      etc: nothing
+    - ID: 15
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30E1\u30AC\u30D2\u30FC\u30EB"
+      effectName: "\u56DE\u5FA9"
+      Lv: 32
+      power: 0.5
+      target: P3
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 50
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u9577"
+      effect: "\u5473\u65B9\u5168\u4F53\u3092\u7652\u3059"
+      etc: nothing
+    - ID: 16
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30EA\u30F4\u30A1\u30A4\u30D6"
+      effectName: "\u56DE\u5FA9"
+      Lv: 32
+      power: 0.2
+      target: P1
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 40
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u9577"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u3092\u751F\u304D\u8FD4\u3089\u305B\u308B"
+      etc: "\u751F\u304D\u8FD4\u3063\u305F\u5473\u65B9\u306EHP\u306E10\uFF05"
+    - ID: 17
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30AE\u30AC\u30AD\u30E5\u30A2"
+      effectName: "\u56DE\u5FA9"
+      Lv: 35
+      power: 0.8
+      target: P1
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 40
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u9577"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u3092\u5F37\u3044\u529B\u3067\u7652\u3059"
+      etc: nothing
+    - ID: 18
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30DB\u30FC\u30EA\u30FC"
+      effectName: "\u30DB\u30FC\u30EA\u30FC"
+      Lv: 45
+      power: 1.3
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 55
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u9577"
+      effect: "\u8056\u306A\u308B\u529B\u3067\u6575\u5358\u4F53\u3092\u6EC5\u307C\u3059"
+      etc: nothing
+    - ID: 19
+      charName: "\u30AB\u30FC\u30E9"
+      skillName: "\u30AE\u30AC\u30D2\u30FC\u30EB"
+      effectName: "\u56DE\u5FA9"
+      Lv: 81
+      power: 0.8
+      target: P3
+      useChara: Receive
+      hpCtl: 2
+      attackType: 0
+      sp: 80
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u9577"
+      effect: "\u5473\u65B9\u5168\u4F53\u3092\u7652\u3059"
+      etc: nothing
+    - ID: 20
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u5E87\u3046"
+      effectName: "\u30D7\u30ED\u30C6\u30AF\u30C8"
+      Lv: 1
+      power: 0
+      target: P1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 7
+      period: 2
+      influence1: 
+      influence2: 
+      Time: "\u7121"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u3092\u5E87\u3046"
+      etc: nothing
+    - ID: 21
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u30C7\u30FC\u30E2\u30F3\u30CF\u30F3\u30C9"
+      effectName: "\u95C71"
+      Lv: 7
+      power: 1.5
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 12
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u9577"
+      effect: "\u60AA\u9B54\u306E\u624B\u3092\u4F7F\u5F79\u3057\u653B\u6483\u3059\u308B"
+      etc: nothing
+    - ID: 22
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u60AA\u9B54\u547C\u3073"
+      effectName: "\u5730\u9762"
+      Lv: 15
+      power: 0.7
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 21
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u9577"
+      effect: "\u914D\u4E0B\u306E\u60AA\u9B54\u3092\u547C\u3073\u6575\u5168\u4F53\u306B\u653B\u6483"
+      etc: nothing
+    - ID: 23
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u30E9\u30A4\u30D5\u30D1\u30B9"
+      effectName: "\u56DE\u5FA9"
+      Lv: 23
+      power: 0.2
+      target: P1
+      useChara: Receive
+      hpCtl: 3
+      attackType: 0
+      sp: 10
+      period: 1
+      influence1: HP
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u81EA\u3089\u306E\u751F\u547D\u529B\u3092\u5473\u65B9\u306B\u5206\u3051\u4E0E\u3048\u308B"
+      etc: nothing
+    - ID: 24
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u4EC1\u738B\u7ACB\u3061"
+      effectName: "\u30D7\u30ED\u30C6\u30AF\u30C8"
+      Lv: 32
+      power: 1
+      target: P3
+      useChara: Receive
+      hpCtl: 0
+      attackType: 1
+      sp: 20
+      period: 2
+      influence1: 
+      influence2: 
+      Time: "\u9577"
+      effect: "\u5473\u65B9\u5168\u4F53\u3092\u5E87\u3046"
+      etc: nothing
+    - ID: 25
+      charName: "\u30C7\u30A3\u30A2\u30CA"
+      skillName: "\u9B54\u795E\u53EC\u559A"
+      effectName: "\u7206\u767A3"
+      Lv: 81
+      power: 4
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 1
+      sp: 55
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u4E16\u754C\u3092\u6EC5\u307C\u3059\u9B54\u795E\u3092\u73FE\u754C\u3055\u305B\u308B"
+      etc: nothing
+    - ID: 26
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30D5\u30A1\u30A4\u30A2"
+      effectName: "\u7206\u767A1"
+      Lv: 1
+      power: 1.2
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 15
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u5358\u4F53\u3092\u708E\u3067\u713C\u304D\u5C3D\u304F\u3059"
+      etc: nothing
+    - ID: 27
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30B5\u30F3\u30C0\u30FC"
+      effectName: "\u96F71"
+      Lv: 1
+      power: 1.2
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 15
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u5358\u4F53\u306B\u96F7\u3092\u53E9\u304D\u3064\u3051\u308B"
+      etc: nothing
+    - ID: 28
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30D5\u30ED\u30B9\u30C8"
+      effectName: "\u6C371"
+      Lv: 1
+      power: 1.2
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 15
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u5358\u4F53\u3092\u51CD\u3066\u3064\u304B\u305B\u308B"
+      etc: nothing
+    - ID: 29
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30E1\u30AC\u2606\u30D5\u30A1\u30A4\u30A2"
+      effectName: "\u7206\u767A1"
+      Lv: 22
+      power: 1.5
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 30
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u5168\u4F53\u3092\u5F37\u529B\u306A\u708E\u3067\u713C\u304D\u5C3D\u304F\u3059"
+      etc: nothing
+    - ID: 30
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30E1\u30AC\u2606\u30B5\u30F3\u30C0\u30FC"
+      effectName: "\u96F73"
+      Lv: 22
+      power: 1.5
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 30
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u5168\u4F53\u306B\u5F37\u529B\u306A\u96F7\u3092\u53E9\u304D\u3064\u3051\u308B"
+      etc: nothing
+    - ID: 31
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30E1\u30AC\u2606\u30D5\u30ED\u30B9\u30C8"
+      effectName: "\u6C373"
+      Lv: 22
+      power: 1.5
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 30
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u5168\u4F53\u3092\u4E00\u77AC\u3067\u51CD\u3066\u3064\u304B\u305B\u308B"
+      etc: nothing
+    - ID: 32
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30AE\u30AC\u2606\u30D5\u30A1\u30A4\u30A2"
+      effectName: "\u7206\u767A3"
+      Lv: 38
+      power: 1.8
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 45
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u5168\u4ED6\u3092\u795E\u8A71\u306E\u708E\u3067\u713C\u304D\u6EC5\u307C\u3059"
+      etc: nothing
+    - ID: 33
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30AE\u30AC\u2606\u30B5\u30F3\u30C0\u30FC"
+      effectName: "\u96F73"
+      Lv: 38
+      power: 1.8
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 45
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u5168\u4ED6\u306B\u795E\u8A71\u306E\u96F7\u3092\u53E9\u304D\u3064\u3051\u308B"
+      etc: nothing
+    - ID: 34
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30AE\u30AC\u2606\u30D5\u30ED\u30B9\u30C8"
+      effectName: "\u6C373"
+      Lv: 38
+      power: 1.8
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 45
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u5168\u4ED6\u3092\u7D76\u5BFE\u96F6\u5EA6\u3067\u5305\u307F\u8FBC\u3080"
+      etc: nothing
+    - ID: 35
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30D5\u30EC\u30A2"
+      effectName: "\u7206\u767A3"
+      Lv: 42
+      power: 1.6
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 65
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u5168\u4F53\u3092\u7206\u6BBA\u3059\u308B"
+      etc: nothing
+    - ID: 36
+      charName: "\u30EA\u30EA\u30FC"
+      skillName: "\u30E1\u30C6\u30AA"
+      effectName: "\u30B8\u30E3\u30C3\u30B8\u30E1\u30F3\u30C8\u30FB\u30C7\u30A4"
+      Lv: 81
+      power: 2.5
+      target: E3
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 80
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u30B8\u30E5\u30E9\u7D00\u3092\u7D42\u308F\u3089\u305B\u308B"
+      etc: "\u624B\u585A\u90E8\u9577\u304C\u30B8\u30E3\u30F3\u30FB\u30B8\u30E3\u30C3\u30AF\u30FB\u30DE\u30EB\u30BD\u30FC\u3092\u846C\u3063\u305F\u6280"
+    - ID: 37
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u304C\u3093\u3070\u308A\u306A\u3055\u3044\u3088\u30C3\uFF01"
+      effectName: "\u56DE\u5FA9"
+      Lv: 1
+      power: 0
+      target: P1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 25
+      period: 3
+      influence1: ATK
+      influence2: MAT
+      Time: "\u4E2D"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u306E\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u30A2\u30C3\u30D7"
+      etc: "1.25\u500D"
+    - ID: 38
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u76EE\u969C\u308A\u3088\u30C3\uFF01"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: -0.2
+      target: E1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 20
+      period: 3
+      influence1: DEF
+      influence2: MDF
+      Time: "\u4E2D"
+      effect: "\u6575\u306E\u9632\u5FA1\u529B\u3092\u4E0B\u3052\u308B"
+      etc: " \u6575\u306E\u9632\u5FA1\u529B*0.7 \u57FA\u790E\u6210\u529F\u738790\u30D1\u30FC\u30BB\u30F3\u30C8"
+    - ID: 39
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u79C1\u306B\u8FD1\u5BC4\u3089\u306A\u3044\u3067\u30C3\uFF01"
+      effectName: "\u546A\u3044"
+      Lv: 8
+      power: -0.2
+      target: E1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 18
+      period: 3
+      influence1: ATK
+      influence2: MAT
+      Time: "\u4E2D"
+      effect: "\u6575\u306E\u653B\u6483\u529B\u3092\u4E0B\u3052\u308B"
+      etc: "\u6575\u306E\u653B\u6483\u529B*0.7 \u57FA\u790E\u6210\u529F\u738785\u30D1\u30FC\u30BB\u30F3\u30C8"
+    - ID: 40
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u3082\u3063\u3068\u30B7\u30E3\u30AD\u30C3\u3068\u3057\u306A\u3055\u3044\u30C3\uFF01"
+      effectName: "\u56DE\u5FA9"
+      Lv: 15
+      power: 0
+      target: P1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 15
+      period: 1
+      influence1: 
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u5473\u65B9\u4E00\u4EBA\u306E\u72B6\u614B\u7570\u5E38\u3092\u56DE\u5FA9\u3059\u308B"
+      etc: nothing
+    - ID: 41
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u52D8\u9055\u3044\u3057\u306A\u3044\u3067\u30C3\uFF01"
+      effectName: "\u546A\u3044"
+      Lv: 19
+      power: 0
+      target: E1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 31
+      period: 1
+      influence1: 
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u306E\u30D0\u30D5\u3092\u6D88\u53BB\u3059\u308B"
+      etc: "\u57FA\u790E\u6210\u529F\u738730\u30D1\u30FC\u30BB\u30F3\u30C8"
+    - ID: 42
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u3046\u308B\u3055\u3044\u3046\u308B\u3055\u3044\u3046\u308B\u3055\u3044\uFF01"
+      effectName: "\u546A\u3044"
+      Lv: 22
+      power: 0
+      target: E1
+      useChara: Receive
+      hpCtl: 0
+      attackType: 0
+      sp: 22
+      period: 3
+      influence1: 
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u306E\u9B54\u6CD5\u3092\u5C01\u3058\u308B"
+      etc: "\u57FA\u790E\u6210\u529F\u7387\u300075\u30D1\u30FC\u30BB\u30F3\u30C8"
+    - ID: 43
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u3053\u308C\u3067\u3082\u98DF\u3089\u3044\u306A\u3055\u3044\u30C3\uFF01"
+      effectName: "\u95C72"
+      Lv: 31
+      power: 1.3
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 42
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B"
+      etc: nothing
+    - ID: 44
+      charName: "\u30A8\u30EA\u30B6"
+      skillName: "\u6B7B\u306B\u306A\u3055\u3044\u30C3\uFF01"
+      effectName: "\u7206\u767A2"
+      Lv: 81
+      power: 100000
+      target: E1
+      useChara: Attack
+      hpCtl: 1
+      attackType: 2
+      sp: 55
+      period: 1
+      influence1: MAT
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u6575\u3092\u5373\u6B7B\u3055\u305B\u308B"
+      etc: "\u57FA\u790E\u6210\u529F\u7387 15\uFF05"
+    - ID: 45
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u58F1\u5F0F\u9B54\u5C0E\u9663\u30FB\u53CD\u653B"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 1
+      target: P0
+      useChara: 
+      hpCtl: 0
+      attackType: 0
+      sp: 40
+      period: 1
+      influence1: 
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u53CD\u6483\u306E\u6A5F\u4F1A\u3092\u3046\u304B\u304C\u3046"
+      etc: "\u6575\u304B\u3089\u53D7\u3051\u305F\u30C0\u30E1\u30FC\u30B8\u3092\u81EA\u5206\u306E\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u306B\u52A0\u7B97\u3059\u308B"
+    - ID: 46
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u5F10\u5F0F\u9B54\u5C0E\u9663\u30FB\u751F\u547D\u5438\u53CE"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 0.7
+      target: E1
+      useChara: 
+      hpCtl: 1
+      attackType: 1
+      sp: 35
+      period: 1
+      influence1: 
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u6575\u304B\u3089\u751F\u547D\u529B\u3092\u596A\u3046"
+      etc: "INT\u4F9D\u5B58"
+    - ID: 47
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u53C2\u5F0F\u9B54\u5C0E\u9663\u30FB\u6D88\u5931"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 0.6
+      target: E3
+      useChara: 
+      hpCtl: 0
+      attackType: 0
+      sp: 45
+      period: 1
+      influence1: 
+      influence2: 
+      Time: "\u9577"
+      effect: "\u6575\u5168\u4F53\u304B\u3089\u884C\u52D5\u3059\u308B\u529B\u3092\u596A\u3046"
+      etc: "\u57FA\u790E\u6210\u529F\u7387\u300060\u30D1\u30FC\u30BB\u30F3\u30C8"
+    - ID: 48
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u8086\u5F0F\u9B54\u5C0E\u9663\u30FB\u5F37\u5316"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 0
+      target: P0
+      useChara: 
+      hpCtl: 0
+      attackType: 0
+      sp: 30
+      period: 3
+      influence1: ATK
+      influence2: 
+      Time: "\u77ED"
+      effect: "\u81EA\u5206\u306E\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u30A2\u30C3\u30D7\u3059\u308B"
+      etc: "1.25\u500D\u3000\u30A8\u30EA\u30B6\u306E\u3082\u306E\u3068\u91CD\u8907\u53EF"
+    - ID: 49
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u4F0D\u5F0F\u9B54\u5C0E\u9663\u30FB\u821E\u8E0F"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 0.4
+      target: E1
+      useChara: 
+      hpCtl: 1
+      attackType: 1
+      sp: 45
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u9577"
+      effect: "\u8E0A\u308B\u3088\u3046\u306B\u653B\u6483\u30574\u56DE\u76F8\u624B\u306B\u30C0\u30E1\u30FC\u30B8"
+      etc: nothing
+    - ID: 50
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u9678\u5F0F\u9B54\u5C0E\u9663\u30FB\u60AA\u9B54\u5FA1\u624B"
+      effectName: "\u546A\u3044"
+      Lv: 1
+      power: 1.2
+      target: E1
+      useChara: 
+      hpCtl: 1
+      attackType: 1
+      sp: 18
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u4E2D"
+      effect: "\u79D1\u5B66\u3068\u9B54\u5C0E\u306E\u529B\u3067\u60AA\u9B54\u3092\u4F7F\u5F79\u3057\u653B\u6483\u3059\u308B"
+      etc: "\u5168\u4F53"
+    - ID: 51
+      charName: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      skillName: "\u6F06\u5F0F\u9B54\u5C0E\u9663\u30FB\u9B54\u795E\u53EC\u559A"
+      effectName: "\u30B8\u30E3\u30C3\u30B8\u30E1\u30F3\u30C8\u30FB\u30C7\u30A4"
+      Lv: 81
+      power: 3.2
+      target: E3
+      useChara: 
+      hpCtl: 1
+      attackType: 1
+      sp: 99
+      period: 1
+      influence1: ATK
+      influence2: 
+      Time: "\u6975\u5927"
+      effect: "\u304B\u3064\u3066\u5168\u3066\u306E\u5927\u7F6A\u3092\u80CC\u8CA0\u3063\u305F\u9B54\u795E\u3092\u73FE\u754C\u3055\u305B\u308B"
+      etc: "\u6575\u5168\u4F53\u306B\u5927\u30C0\u30E1\u30FC\u30B8"

@@ -1,0 +1,59 @@
+;チュートリアル用スクリプトファイル
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+;[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+[wait time=2]
+[chara_new name="シャルロット" storage="シャルロット" jname = "シャルロット" x=-3]
+
+[chara_new name="カーラ" storage="カーラ" jname = "カーラ" x=-3 scale_x=-1]
+
+[chara_new name="ターナー" storage="ターナー" jname = "ターナー" x=3 scale_x=-1]
+
+#カーラ
+ここがこの遺跡の最深部？[p]
+
+#ターナー
+そうだよお嬢さん方[p]
+
+#シャルロット
+誰！？[p]
+
+#ターナー
+これは失礼。[l][r]
+遺跡についていろいろ研究していてね。[l][r]
+お嬢さん方は？ここは女子会をするには物騒だよ。[p]
+
+#シャルロット
+私達は肌年齢を若返らせにきたの！[p]
+
+#ターナー
+？？？[p]
+
+#カーラ
+えっと今のは忘れてください。[p]私たちは願いが叶うといわれている財宝を探しに来たんです。[p]
+
+#ターナー
+…………。[p]
+
+#ターナー
+お嬢さん方悪いことは言わない。[p]引き返して遺跡の事はきれいさっぱり忘れるんだ。[p]
+
+
+#カーラ
+そういうわけにも行きません。[l][r]私達にも引けない理由はあります！[p]
+
+#ターナー
+ならば仕方がない……[r]二人には痛い目にあってもらうとしようかッ！[p]
+
+
+

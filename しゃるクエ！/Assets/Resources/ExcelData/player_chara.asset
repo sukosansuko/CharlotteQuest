@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c449556c0773e4e4c80246e6c2defa58, type: 3}
+  m_Name: player_chara
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: player_statusList
+    list:
+    - ID: 1
+      Name: "\u30B7\u30E3\u30EB\u30ED\u30C3\u30C8"
+      HP: 220
+      SP: 100
+      ATK: 80
+      DEF: 60
+      SPD: 75
+      MAT: 15
+      MDF: 50
+      LUK: 90
+      AttackSkill1: 1
+      AttackSkill2: 4
+      AttackSkill3: 5
+      AttackSkill4: 6
+      AttackSkill5: 7
+      AttackSkill6: 8
+      AttackSkill7: 9
+      AttackSkill8: 10
+      SupportSkill1: 3
+      SupportSkill2: 0
+      SupportSkill3: 0
+      SupportSkill4: 0
+      SupportSkill5: 0
+      SupportSkill6: 0
+      SupportSkill7: 0
+      SupportSkill8: 0
+    - ID: 2
+      Name: "\u30AB\u30FC\u30E9"
+      HP: 180
+      SP: 220
+      ATK: 40
+      DEF: 45
+      SPD: 60
+      MAT: 70
+      MDF: 70
+      LUK: 55
+      AttackSkill1: 2
+      AttackSkill2: 18
+      AttackSkill3: 0
+      AttackSkill4: 0
+      AttackSkill5: 0
+      AttackSkill6: 0
+      AttackSkill7: 0
+      AttackSkill8: 0
+      SupportSkill1: 3
+      SupportSkill2: 11
+      SupportSkill3: 12
+      SupportSkill4: 13
+      SupportSkill5: 14
+      SupportSkill6: 15
+      SupportSkill7: 16
+      SupportSkill8: 17
+    - ID: 3
+      Name: "\u30C7\u30A3\u30A2\u30CA"
+      HP: 280
+      SP: 45
+      ATK: 60
+      DEF: 72
+      SPD: 40
+      MAT: 5
+      MDF: 65
+      LUK: 60
+      AttackSkill1: 1
+      AttackSkill2: 21
+      AttackSkill3: 22
+      AttackSkill4: 25
+      AttackSkill5: 0
+      AttackSkill6: 0
+      AttackSkill7: 0
+      AttackSkill8: 0
+      SupportSkill1: 3
+      SupportSkill2: 20
+      SupportSkill3: 23
+      SupportSkill4: 24
+      SupportSkill5: 0
+      SupportSkill6: 0
+      SupportSkill7: 0
+      SupportSkill8: 0
+    - ID: 4
+      Name: "\u30EA\u30EA\u30FC"
+      HP: 150
+      SP: 180
+      ATK: 15
+      DEF: 30
+      SPD: 60
+      MAT: 99
+      MDF: 80
+      LUK: 70
+      AttackSkill1: 2
+      AttackSkill2: 26
+      AttackSkill3: 27
+      AttackSkill4: 28
+      AttackSkill5: 29
+      AttackSkill6: 30
+      AttackSkill7: 31
+      AttackSkill8: 32
+      SupportSkill1: 3
+      SupportSkill2: 0
+      SupportSkill3: 0
+      SupportSkill4: 0
+      SupportSkill5: 0
+      SupportSkill6: 0
+      SupportSkill7: 0
+      SupportSkill8: 0
+    - ID: 5
+      Name: "\u30A8\u30EA\u30B6"
+      HP: 270
+      SP: 150
+      ATK: 50
+      DEF: 65
+      SPD: 80
+      MAT: 65
+      MDF: 67
+      LUK: 71
+      AttackSkill1: 2
+      AttackSkill2: 43
+      AttackSkill3: 44
+      AttackSkill4: 0
+      AttackSkill5: 0
+      AttackSkill6: 0
+      AttackSkill7: 0
+      AttackSkill8: 0
+      SupportSkill1: 3
+      SupportSkill2: 37
+      SupportSkill3: 38
+      SupportSkill4: 39
+      SupportSkill5: 40
+      SupportSkill6: 41
+      SupportSkill7: 42
+      SupportSkill8: 0
+    - ID: 6
+      Name: "\u30E2\u30EB\u30BF\u30EA\u30A2"
+      HP: 240
+      SP: 175
+      ATK: 72
+      DEF: 55
+      SPD: 58
+      MAT: 70
+      MDF: 99
+      LUK: 24
+      AttackSkill1: 1
+      AttackSkill2: 46
+      AttackSkill3: 49
+      AttackSkill4: 50
+      AttackSkill5: 51
+      AttackSkill6: 0
+      AttackSkill7: 0
+      AttackSkill8: 0
+      SupportSkill1: 3
+      SupportSkill2: 45
+      SupportSkill3: 47
+      SupportSkill4: 48
+      SupportSkill5: 0
+      SupportSkill6: 0
+      SupportSkill7: 0
+      SupportSkill8: 0

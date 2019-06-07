@@ -1,0 +1,88 @@
+﻿;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+;[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+[chara_new name="レヴィ" storage="レヴィ" layer=Default sort=1 jname = "レヴィ" tag = 2 x = 3.5]
+[chara_new name="シャルロット" storage="シャルロット" layer=Default sort=1 jname = "シャルロット" tag = 2 x = -3.5 scale_x = -1]
+[chara_new name="カーラ" storage="カーラ" layer=Default sort=1 jname = "カーラ" tag = 1 x = -1.5 scale_x = -1]
+[chara_new name="リリー" storage=リリー" layer=Default sort=1 jname = "リリー" tag = 1 x = 1.5]
+[chara_new name="ディアナ" storage="ディアナ" layer=Default sort=1 jname = "ディアナ" tag = 1 x = 3.5]
+
+[bg_new storage="洞窟1"]
+[bg_show storage="洞窟1"]
+[show tag = 2]
+[playse storage="剣1"]
+#レヴィ
+くそ......何でこいつらこんなに強いんだよ！[l][r]
+お、覚えてろよーー！！！[p]
+[playse storage="逃げる"]
+[chara_remove name = "レヴィ"]
+
+[show tag = 1]
+#シャルロット
+とりあえず何とかなったわね[p]
+
+#カーラ
+あの子涙目だったけど、大丈夫かなぁ？[p]
+
+[playse storage="ポヨ"]
+#リリー
+助けてくれてどうもありがとー☆[p]
+私はリリー！[l][r]
+将来の夢は超一流のアイドル兼超一流の魔女になること！[l][r]
+ヨロシクね☆[p]
+
+#カーラ
+よろしくねリリーちゃん、私はカーラ[l][r]
+こっちがシャルちゃんで、こっちはディアナちゃんだよ[p]
+ところで、どうしてこんなところに一人でいるの？[p]
+
+#リリー
+ふっふっふ...　よくぞ聞いてくれました！[l][r]
+それは、どこかの遺跡にあるってウワサのなんでも願いを叶えてくれる財宝―――[p]
+[playse storage="キメ"]
+願い玉で超絶一流の魔女っ娘アイドルになるためだよ！！[p]
+
+#シャルロット
+願い玉......[r]
+その名前は聞いたことなかったけど、あたしたちが探してるものとおなじみたいね[p]
+
+#リリー
+そうなの？[r]
+すっごい偶然ね！！[p]
+さっきの戦いも私たち相性バツグンだったし、もしよかったら私もあなたたちと一緒に行ってもいい？[p]
+
+#シャルロット
+もちろんよ！[r]
+これからよろしくね、リリー[p]
+
+#リリー
+こちらこそよろしくねシャルちゃん！[l][r]
+ディアナちゃんもよろしくね☆[p]
+
+#ディアナ
+よろしく[p]
+ゲームバランス的にそろそろ魔法の火力職が必要だと思ってた[l][r]
+[playse storage="キメ2"]
+そしてもうすぐ物理耐性のある敵が出てくるはず[p]
+
+[playse storage="間抜け3"]
+#カーラ
+ディアナちゃんが何言ってるのか私にはわからないよ...[p]
+
+#リリー
+では改めて！[l]
+見習いアイドル兼見習い魔女、そして未来のトップアイドルリリーだよ！！これからよろしくね☆[p]
+
+#
+～リリーが仲間に加わった！～
+
+[scene file = "W3"]
