@@ -67,19 +67,19 @@
      <None Include="Assets\Terasurware\Editor\EntityTemplate.txt" />
      <None Include="Assets\Terasurware\Editor\EntityTemplate2.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -340,40 +340,40 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Plugins/JOKER/LitJson.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Plugins/JOKER/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="NCalc">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Plugins/JOKER/NCalc.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Plugins/JOKER/NCalc.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Terasurware/Editor/npoi/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Terasurware/Editor/npoi/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="NPOI">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OOXML">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OOXML.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OOXML.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXml4Net">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXmlFormats">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Assets/Terasurware/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/Charlotte-quest/しゃるクエ！/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>D:/麻生情報ビジネス専門学校/3年/5月制作/CharlotteQuest/しゃるクエ！/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

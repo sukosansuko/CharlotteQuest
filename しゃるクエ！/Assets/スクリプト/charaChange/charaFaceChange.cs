@@ -28,6 +28,8 @@ public class charaFaceChange : MonoBehaviour
 
     public GameObject CharLV;
 
+    public GameObject CharExp;
+
     private GameObject sceneNavigator;
 
     private GameObject Manager;
@@ -157,27 +159,33 @@ public class charaFaceChange : MonoBehaviour
         {
             case 1:
                 CharName.GetComponent<Text>().text = "シャルロット";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID1));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(1));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(1));
                 break;
             case 2:
                 CharName.GetComponent<Text>().text = "カーラ";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID2));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(2));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(2));
                 break;
             case 3:
                 CharName.GetComponent<Text>().text = "ディアナ";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID3));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(3));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(3));
                 break;
             case 4:
                 CharName.GetComponent<Text>().text = "リリー";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID4));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(4));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(4));
                 break;
             case 5:
                 CharName.GetComponent<Text>().text = "エリザ";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID5));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(5));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(5));
                 break;
             case 6:
                 CharName.GetComponent<Text>().text = "モルタリア";
-                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(pID6));
+                CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(6));
+                CharExp.GetComponent<Text>().text = "あと" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetNextLevelExp(6));
                 break;
             default:
                 break;

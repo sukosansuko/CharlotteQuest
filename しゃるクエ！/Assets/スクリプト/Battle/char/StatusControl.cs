@@ -263,4 +263,11 @@ public class StatusControl : MonoBehaviour
     {
         return Exp;
     }
+
+    //  レベルアップまでに必要な経験値
+    public int GetNextLevelExp(int charID)
+    {
+        EL = Resources.Load("ExcelData/EXP_List") as EXP_List;
+        return (EL.sheets[0].list[StatusList[charID - 1].LV - 1].TotalExp) - (StatusList[charID - 1].EXP);
+    }
 }
