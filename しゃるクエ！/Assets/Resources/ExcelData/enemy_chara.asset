@@ -121,9 +121,9 @@ MonoBehaviour:
       Name: "\u30BF\u30FC\u30CA\u30FC"
       HP: 1200
       SP: 55
-      ATK: 85
+      ATK: 150
       DEF: 32
-      SPD: 32
+      SPD: 120
       MAT: 60
       MDF: 40
       LUK: 15

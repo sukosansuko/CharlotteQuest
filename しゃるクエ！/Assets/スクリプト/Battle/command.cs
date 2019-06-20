@@ -62,6 +62,8 @@ public class command : MonoBehaviour
 
     private int charLV;
 
+    private int charSP;
+
     void Start()
     {
         battleManager = GameObject.Find("BattleManager");
@@ -362,54 +364,74 @@ public class command : MonoBehaviour
 
         }
 
-        //  playerSkillのtargetから、ターゲットを取得
-        string Name = PS.sheets[0].list[skillNumber - 1].target;
-        int ActivePlayer = SetActivePlayer();
+        //  SPが足りない場合はターゲットを表示しない&ターゲットを消す
+        if (charSP < PS.sheets[0].list[skillNumber - 1].sp)
+        {
+            foreach (Transform child in playerTarget)
+            {
+                child.gameObject.SetActive(false);
+            }
 
-        //  味方に対する技
-        if (Name.StartsWith("P"))
-        {
-            if (Name.Contains("0"))
+            foreach (Transform child in enemyTarget)
             {
-                playerTarget.GetChild(ActivePlayer).gameObject.SetActive(true);
+                child.gameObject.SetActive(false);
             }
-            else if(Name.Contains("1"))
-            {
-                playerTarget.GetChild(target).gameObject.SetActive(true);
-                foreach (Transform child in player)
-                {
-                    child.gameObject.GetComponent<Status>().SetRayCast(true);
-                }
-            }
-            else
-            {
-                foreach (Transform child in playerTarget)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            }
+
+            DescriptionText.GetComponent<Text>().text = "SPが足りないから許可しないィィィィィィ!";
+
         }
-        //  敵に対する技  
+        //  SPが足りるならターゲットを表示
         else
-        {
-            if (Name.Contains("1"))
+        { 
+            //  playerSkillのtargetから、ターゲットを取得
+            string Name = PS.sheets[0].list[skillNumber - 1].target;
+            int ActivePlayer = SetActivePlayer();
+
+            //  味方に対する技
+            if (Name.StartsWith("P"))
             {
-                enemyTarget.GetChild(target).gameObject.SetActive(true);
-                foreach (Transform child in enemy)
+                if (Name.Contains("0"))
                 {
-                    child.gameObject.GetComponent<Status>().SetRayCast(true);
+                    playerTarget.GetChild(ActivePlayer).gameObject.SetActive(true);
+                }
+                else if (Name.Contains("1"))
+                {
+                    playerTarget.GetChild(target).gameObject.SetActive(true);
+                    foreach (Transform child in player)
+                    {
+                        child.gameObject.GetComponent<Status>().SetRayCast(true);
+                    }
+                }
+                else
+                {
+                    foreach (Transform child in playerTarget)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
                 }
             }
+            //  敵に対する技  
             else
             {
-                foreach (Transform child in enemyTarget)
+                if (Name.Contains("1"))
                 {
-                    child.gameObject.SetActive(true);
+                    enemyTarget.GetChild(target).gameObject.SetActive(true);
+                    foreach (Transform child in enemy)
+                    {
+                        child.gameObject.GetComponent<Status>().SetRayCast(true);
+                    }
+                }
+                else
+                {
+                    foreach (Transform child in enemyTarget)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
                 }
             }
+            DescriptionText.GetComponent<Text>().text = PS.sheets[0].list[skillNumber - 1].effect;
+            SkillID = skillNumber - 1;
         }
-        DescriptionText.GetComponent<Text>().text = PS.sheets[0].list[skillNumber - 1].effect;
-        SkillID = skillNumber - 1;
     }
 
     public void ActionStart()
@@ -541,6 +563,11 @@ public class command : MonoBehaviour
         //}
     }
 
+    //  
+    public void SetSP(int sp)
+    {
+        charSP = sp;
+    }
 
     public void SetCharID(int id)
     {

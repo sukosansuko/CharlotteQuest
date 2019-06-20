@@ -384,6 +384,7 @@ public class Status : MonoBehaviour
                 if (playerProof)
                 {
                     battleManager.GetComponent<command>().SetCharID(charID - 1);
+                    battleManager.GetComponent<command>().SetSP(SP);
                     battleManager.GetComponent<command>().SetLV(LV);
                     battleManager.GetComponent<BattleScene>().SetActiveChoose(true);
                     battleManager.GetComponent<command>().commandDisplay();

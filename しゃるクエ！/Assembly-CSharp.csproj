@@ -141,6 +141,7 @@
      <Compile Include="Assets\スクリプト\invisible.cs" />
      <Compile Include="Assets\スクリプト\move.cs" />
      <Compile Include="Assets\スクリプト\notDiscard.cs" />
+     <Compile Include="Assets\スクリプト\PointMove.cs" />
      <Compile Include="Assets\スクリプト\Scene.cs" />
      <Compile Include="Assets\スクリプト\stage\battleMass.cs" />
      <Compile Include="Assets\スクリプト\stage\bossMass.cs" />
