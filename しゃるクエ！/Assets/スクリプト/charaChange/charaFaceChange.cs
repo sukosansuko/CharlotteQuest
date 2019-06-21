@@ -30,6 +30,8 @@ public class charaFaceChange : MonoBehaviour
 
     public GameObject CharExp;
 
+    public GameObject EmptyText;
+
     private GameObject sceneNavigator;
 
     private GameObject Manager;
@@ -45,6 +47,24 @@ public class charaFaceChange : MonoBehaviour
         Manager = GameObject.Find("Manager");
 
         image = GetComponent<Image>();
+
+        if(sceneNavigator.GetComponent<StatusControl>().FindChar(1))
+        {
+            Debug.Log("シャルおるで");
+        }
+        else
+        {
+            Debug.Log("シャルいないで");
+        }
+
+        if (sceneNavigator.GetComponent<StatusControl>().FindChar(4))
+        {
+            Debug.Log("リリーおるで");
+        }
+        else
+        {
+            Debug.Log("リリーいないで");
+        }
     }
 
     // Update is called once per frame
@@ -61,6 +81,9 @@ public class charaFaceChange : MonoBehaviour
 
         switch (imageCnt)
         {
+            case 0:
+                image.sprite = null;
+                break;
             case 1:
                 image.sprite = sp1;
                 break;
@@ -125,6 +148,11 @@ public class charaFaceChange : MonoBehaviour
 
         switch (id)
         {
+            //  0はキャラがいない状態
+            case 0:
+                imageCnt = 0;
+                break;
+
             case 1:
                 imageCnt = 1;
                 break;
@@ -155,8 +183,16 @@ public class charaFaceChange : MonoBehaviour
 
     private void SetNameLV()
     {
+        EmptyText.GetComponent<Text>().enabled = false;
         switch(imageCnt)
         {
+            case 0:
+                GetComponent<Image>().enabled = false;
+                CharName.GetComponent<Text>().enabled = false;
+                CharLV.GetComponent<Text>().enabled = false;
+                CharExp.GetComponent<Text>().enabled = false;
+                EmptyText.GetComponent<Text>().enabled = true;
+                break;
             case 1:
                 CharName.GetComponent<Text>().text = "シャルロット";
                 CharLV.GetComponent<Text>().text = "LV:" + Convert.ToString(sceneNavigator.GetComponent<StatusControl>().GetLV(1));

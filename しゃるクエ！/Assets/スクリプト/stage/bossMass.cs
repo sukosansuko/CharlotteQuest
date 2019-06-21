@@ -35,6 +35,8 @@ public class bossMass : MonoBehaviour
             if (stageMass.MassName == "boss")
             {
                 Create(6, WorldID);
+                //  ディアナが仲間になる
+                sceneNavigator.GetComponent<StatusControl>().SetAddCharID(3);
             }
         }
         WorldID++;
@@ -43,6 +45,8 @@ public class bossMass : MonoBehaviour
             if (stageMass.MassName == "boss")
             {
                 Create(11, WorldID);
+                //  リリーが仲間になる
+                sceneNavigator.GetComponent<StatusControl>().SetAddCharID(4);
             }
         }
         WorldID++;
@@ -51,6 +55,9 @@ public class bossMass : MonoBehaviour
             if (stageMass.MassName == "boss")
             {
                 Create(17, WorldID);
+
+                //  エリザが仲間になる
+                sceneNavigator.GetComponent<StatusControl>().SetAddCharID(5);
             }
         }
     }

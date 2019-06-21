@@ -140,4 +140,5 @@ public class battleMass : MonoBehaviour {
         Debug.Log("カウント" + count);
         SceneNavigator.Instance.Change("BattleScene");
     }
+
 }

@@ -7,28 +7,28 @@ using System;
 public class EnemyAction : MonoBehaviour
 {
     //  敵用画像読み込み
-    [SerializeField] private Sprite esp1;
-    [SerializeField] private Sprite esp2;
-    [SerializeField] private Sprite esp3;
-    [SerializeField] private Sprite esp4;
-    [SerializeField] private Sprite esp5;
-    [SerializeField] private Sprite esp6;
-    [SerializeField] private Sprite esp7;
-    [SerializeField] private Sprite esp8;
-    [SerializeField] private Sprite esp9;
-    [SerializeField] private Sprite esp10;
-    [SerializeField] private Sprite esp11;
-    [SerializeField] private Sprite esp12;
-    [SerializeField] private Sprite esp13;
-    [SerializeField] private Sprite esp14;
-    [SerializeField] private Sprite esp15;
-    [SerializeField] private Sprite esp16;
-    [SerializeField] private Sprite esp17;
-    [SerializeField] private Sprite esp18;
-    [SerializeField] private Sprite esp19;
-    [SerializeField] private Sprite esp20;
-    [SerializeField] private Sprite esp21;
-    [SerializeField] private Sprite esp22;
+    [SerializeField] private Sprite esp1 = null;
+    [SerializeField] private Sprite esp2 = null;
+    [SerializeField] private Sprite esp3 = null;
+    [SerializeField] private Sprite esp4 = null;
+    [SerializeField] private Sprite esp5 = null;
+    [SerializeField] private Sprite esp6 = null;
+    [SerializeField] private Sprite esp7 = null;
+    [SerializeField] private Sprite esp8 = null;
+    [SerializeField] private Sprite esp9 = null;
+    [SerializeField] private Sprite esp10 = null;
+    [SerializeField] private Sprite esp11 = null;
+    [SerializeField] private Sprite esp12 = null;
+    [SerializeField] private Sprite esp13 = null;
+    [SerializeField] private Sprite esp14 = null;
+    [SerializeField] private Sprite esp15 = null;
+    [SerializeField] private Sprite esp16 = null;
+    [SerializeField] private Sprite esp17 = null;
+    [SerializeField] private Sprite esp18 = null;
+    [SerializeField] private Sprite esp19 = null;
+    [SerializeField] private Sprite esp20 = null;
+    [SerializeField] private Sprite esp21 = null;
+    [SerializeField] private Sprite esp22 = null;
 
     private int charID;
     

@@ -120,6 +120,7 @@ public class BattleScene : MonoBehaviour
                 SEFlag = true;
             }
             BFinish.GetComponent<Image>().enabled = true;
+            sceneNavigator.GetComponent<StatusControl>().AddChar();
         }
         //  プレイヤーが全滅した時の処理
         else if (!GetComponent<command>().PlayerAlive())

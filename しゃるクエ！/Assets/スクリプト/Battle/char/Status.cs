@@ -21,20 +21,20 @@ public class Status : MonoBehaviour
     private int WAIT_SPD;                       //  技発動までの待機用の素早さ
 
     //  プレイヤー用画像読み込み
-    [SerializeField] private Sprite psp1;
-    [SerializeField] private Sprite psp2;
-    [SerializeField] private Sprite psp3;
-    [SerializeField] private Sprite psp4;
-    [SerializeField] private Sprite psp5;
-    [SerializeField] private Sprite psp6;
+    [SerializeField] private Sprite psp1 = null;
+    [SerializeField] private Sprite psp2 = null;
+    [SerializeField] private Sprite psp3 = null; 
+    [SerializeField] private Sprite psp4 = null;
+    [SerializeField] private Sprite psp5 = null;
+    [SerializeField] private Sprite psp6 = null;
 
     //  プレイヤー用アイコン
-    [SerializeField] private Sprite pIcon1;
-    [SerializeField] private Sprite pIcon2;
-    [SerializeField] private Sprite pIcon3;
-    [SerializeField] private Sprite pIcon4;
-    [SerializeField] private Sprite pIcon5;
-    [SerializeField] private Sprite pIcon6;
+    [SerializeField] private Sprite pIcon1 = null;
+    [SerializeField] private Sprite pIcon2 = null;
+    [SerializeField] private Sprite pIcon3 = null;
+    [SerializeField] private Sprite pIcon4 = null;
+    [SerializeField] private Sprite pIcon5 = null;
+    [SerializeField] private Sprite pIcon6 = null;
 
     public Button ContinueBtn;
 
@@ -133,7 +133,6 @@ public class Status : MonoBehaviour
 
     private bool actionFlag = false;
     private int waitTime = 0;
-    private bool skillInputFlag = false;
 
     private int spCost;
     private int HPCtlFlag;

@@ -44,15 +44,20 @@ public class StatusControl : MonoBehaviour
     //  そのステージでもらえる経験値
     private int Exp;
 
+    //  仲間になるキャラクターのID(0なら無し)
+    private int addCharID;
+
     void Start()
     {
         StatusInit();
         playerList.Add(1);
         playerList.Add(2);
         playerList.Add(3);
-        playerList.Add(4);
-        playerList.Add(5);
-        playerList.Add(6);
+        //playerList.Add(4);
+        //playerList.Add(5);
+        //playerList.Add(6);
+
+        addCharID = 0;
 
         stageID = 1;
         BGMID = 1;
@@ -67,7 +72,7 @@ public class StatusControl : MonoBehaviour
         for (int charID = 0; charID < 6; charID++)
         {
             StatusList[charID] = new statusData(){
-                                                    CharName = PC.sheets[0].list[charID].Name, LV = 10,   HP = (int)PC.sheets[0].list[charID].HP,        SP = (int)PC.sheets[0].list[charID].SP,
+                                                    CharName = PC.sheets[0].list[charID].Name, LV = 99,   HP = (int)PC.sheets[0].list[charID].HP,        SP = (int)PC.sheets[0].list[charID].SP,
                                                     ATK = (int)PC.sheets[0].list[charID].ATK,            DEF = (int)PC.sheets[0].list[charID].DEF,
                                                     SPD = (int)PC.sheets[0].list[charID].SPD,            MAT = (int)PC.sheets[0].list[charID].MAT,
                                                     MDF = (int)PC.sheets[0].list[charID].MDF,            LUK = (int)PC.sheets[0].list[charID].LUK,      EXP = 1200
@@ -186,9 +191,34 @@ public class StatusControl : MonoBehaviour
         char1 = playerList[0];
         char2 = playerList[1];
         char3 = playerList[2];
-        char4 = playerList[3];
-        char5 = playerList[4];
-        char6 = playerList[5];
+
+        //  仲間がいるか確認する
+        if (playerList.Count >= 4)
+        {
+            char4 = playerList[3];
+        }
+        else
+        {
+            char4 = 0;
+        }
+
+        if (playerList.Count >= 5)
+        {
+            char5 = playerList[4];
+        }
+        else
+        {
+            char5 = 0;
+        }
+
+        if (playerList.Count >= 6)
+        {
+            char6 = playerList[5];
+        }
+        else
+        {
+            char6 = 0;
+        }
     }
 
     //  戦闘のキャラの取得(ホームやワールドマップ用)
@@ -269,5 +299,34 @@ public class StatusControl : MonoBehaviour
     {
         EL = Resources.Load("ExcelData/EXP_List") as EXP_List;
         return (EL.sheets[0].list[StatusList[charID - 1].LV - 1].TotalExp) - (StatusList[charID - 1].EXP);
+    }
+
+    //  任意のキャラクターが仲間になっているか検索する
+    public bool FindChar(int _charID)
+    {
+        if(playerList.IndexOf(_charID) == -1)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    //  任意のキャラクターを仲間にする(既に仲間になっていたらfalseを返す)
+    public bool AddChar()
+    {
+        if(!FindChar(addCharID))
+        {
+            playerList.Add(addCharID);
+            return true;
+        }
+
+        //  初期化
+        addCharID = 0;
+        return false;
+    }
+
+    public void SetAddCharID(int _charID)
+    {
+        addCharID = _charID;
     }
 }

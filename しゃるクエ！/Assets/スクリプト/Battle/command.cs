@@ -377,7 +377,7 @@ public class command : MonoBehaviour
                 child.gameObject.SetActive(false);
             }
 
-            DescriptionText.GetComponent<Text>().text = "SPが足りないから許可しないィィィィィィ!";
+            DescriptionText.GetComponent<Text>().text = "SPが足りないぞッ";
 
         }
         //  SPが足りるならターゲットを表示

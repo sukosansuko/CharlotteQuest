@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] GameObject ClickParticle;
+    [SerializeField] GameObject ClickParticle = null;
 
     Vector3 mousePos;
     Vector2 screenWorldPos;
