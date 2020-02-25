@@ -52,17 +52,17 @@ public class stageData_importer : AssetPostprocessor {
 						
 					cell = row.GetCell(0); p.stage = (int)(cell == null ? 0 : cell.NumericCellValue);
 					cell = row.GetCell(1); p.enemy_count = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(2); p.extra = (cell == null ? "" : cell.StringCellValue);
-					cell = row.GetCell(3); p.enemy1 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(4); p.enemy2 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(5); p.enemy3 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(6); p.enemy4 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(7); p.enemy5 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(8); p.enemy6 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(9); p.enemy7 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(10); p.enemy8 = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(11); p.BGM = (int)(cell == null ? 0 : cell.NumericCellValue);
-					cell = row.GetCell(12); p.EXP = (cell == null ? 0.0 : cell.NumericCellValue);
+					cell = row.GetCell(2); p.enemy_typeCount = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(4); p.enemy1 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(5); p.enemy2 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(6); p.enemy3 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(7); p.enemy4 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(8); p.enemy5 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(9); p.enemy6 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(10); p.enemy7 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(11); p.enemy8 = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(12); p.BGM = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(13); p.EXP = (cell == null ? 0.0 : cell.NumericCellValue);
 						s.list.Add (p);
 					}
 					data.sheets.Add(s);

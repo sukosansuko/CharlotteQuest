@@ -8,6 +8,7 @@ public class battleMass : MonoBehaviour {
     private GameObject sceneNavigator;
     private stageData SD;
 
+
     // Use this for initialization
     void Start()
     {
@@ -129,9 +130,57 @@ public class battleMass : MonoBehaviour {
         }
         if (SD.sheets[0].list[count].enemy_count == 3)
         {
-            enemy1 = SD.sheets[0].list[count].enemy1;
-            enemy2 = SD.sheets[0].list[count].enemy2;
-            enemy3 = SD.sheets[0].list[count].enemy3;
+            for (int i = 0; i < 3;i++)
+            {
+                int randNumber = UnityEngine.Random.Range(1, SD.sheets[0].list[count].enemy_typeCount + 1);
+                int num = 0;
+                switch (randNumber)
+                {
+                    case 1:
+                        num = SD.sheets[0].list[count].enemy1;
+                        break;
+                    case 2:
+                        num = SD.sheets[0].list[count].enemy2;
+                        break;
+                    case 3:
+                        num = SD.sheets[0].list[count].enemy3;
+                        break;
+                    case 4:
+                        num = SD.sheets[0].list[count].enemy4;
+                        break;
+                    case 5:
+                        num = SD.sheets[0].list[count].enemy5;
+                        break;
+                    case 6:
+                        num = SD.sheets[0].list[count].enemy6;
+                        break;
+                    case 7:
+                        num = SD.sheets[0].list[count].enemy7;
+                        break;
+                    case 8:
+                        num = SD.sheets[0].list[count].enemy8;
+                        break;
+                    default:
+                        break;
+                }
+                Debug.Log("ああああああああああああああああああああ" + num);
+                if (i == 0)
+                {
+                    enemy1 = num;
+                }
+                else if(i == 1)
+                {
+                    enemy2 = num;
+                }
+                else
+                {
+                    enemy3 = num;
+                }
+            }
+
+            //enemy1 = SD.sheets[0].list[count].enemy1;
+            //enemy2 = SD.sheets[0].list[count].enemy2;
+            //enemy3 = SD.sheets[0].list[count].enemy3;
         }
         sceneNavigator.GetComponent<StatusControl>().SetEnemyList(enemy1, enemy2, enemy3);
         sceneNavigator.GetComponent<StatusControl>().SetBGMID(SD.sheets[0].list[count].BGM);

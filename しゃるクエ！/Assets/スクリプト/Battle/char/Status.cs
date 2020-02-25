@@ -61,6 +61,7 @@ public class Status : MonoBehaviour
     public GameObject PSPDisplay;
     public GameObject PCondition;
 
+    public GameObject Damage;                   //  ダメージ用テキスト
 
     player_charaList PC;
     player_skillList PS;
@@ -153,6 +154,7 @@ public class Status : MonoBehaviour
     void Start()
     {
         Name = this.gameObject.name;
+
         Debug.Log(Name);
 
         battleManager = GameObject.Find("BattleManager");
@@ -188,6 +190,7 @@ public class Status : MonoBehaviour
             Destroy(TLIcon);
             ContinueBtn.interactable = false;
             Destroy(MyTarget);
+            Destroy(Damage);
             if (!playerProof)
             {
                 Destroy(EHPDisplay);
@@ -212,6 +215,21 @@ public class Status : MonoBehaviour
     {
         SetState(STATE.ST_DEAD);
         //animator.SetTrigger("Dead");
+    }
+
+    public void DaText(int num)
+    {
+        Damage.GetComponent<DamageText>().SetDamage(num);
+    }
+
+    public void CuText(int num)
+    {
+        Damage.GetComponent<DamageText>().SetCure(num);
+    }
+
+    public void DelDaText()
+    {
+        Damage.GetComponent<DamageText>().SetFalse();
     }
 
     public void SetChara()
@@ -436,17 +454,29 @@ public class Status : MonoBehaviour
                 if (waitTime >= 80)
                 {
                     battleManager.GetComponent<command>().ActionEnd();
-                    if (ReceiveChara1 != null && ReceiveChara1.GetComponent<Status>().GetHP() <= 0)
+                    if (ReceiveChara1 != null)
                     {
-                        ReceiveChara1.GetComponent<Status>().Dead();
+                        ReceiveChara1.GetComponent<Status>().DelDaText();
+                        if(ReceiveChara1.GetComponent<Status>().GetHP() <= 0)
+                        {
+                            ReceiveChara1.GetComponent<Status>().Dead();
+                        }
                     }
-                    if (ReceiveChara2 != null && ReceiveChara2.GetComponent<Status>().GetHP() <= 0)
+                    if (ReceiveChara2 != null)
                     {
-                        ReceiveChara2.GetComponent<Status>().Dead();
+                        ReceiveChara2.GetComponent<Status>().DelDaText();
+                        if (ReceiveChara2.GetComponent<Status>().GetHP() <= 0)
+                        {
+                            ReceiveChara2.GetComponent<Status>().Dead();
+                        }
                     }
-                    if (ReceiveChara3 != null && ReceiveChara3.GetComponent<Status>().GetHP() <= 0)
+                    if (ReceiveChara3 != null)
                     {
-                        ReceiveChara3.GetComponent<Status>().Dead();
+                        ReceiveChara3.GetComponent<Status>().DelDaText();
+                        if (ReceiveChara3.GetComponent<Status>().GetHP() <= 0)
+                        {
+                            ReceiveChara3.GetComponent<Status>().Dead();
+                        }
                     }
 
                     TLProgress = 0;
@@ -460,6 +490,7 @@ public class Status : MonoBehaviour
                     battleManager.GetComponent<BattleScene>().SetReceiveObj(null, null, null);
                 }
             }
+
 
             if (battleManager.GetComponent<command>().GetCommandEnd())
             {
@@ -815,7 +846,7 @@ public class Status : MonoBehaviour
             rec1 = ReceiveChara1;
             count++;
         }
-        if (ReceiveChara2 != null && ReceiveChara1.GetComponent<Status>().GetState() != STATE.ST_DEAD)
+        if (ReceiveChara2 != null && ReceiveChara2.GetComponent<Status>().GetState() != STATE.ST_DEAD)
         {
             if(!rec1)
             {
@@ -827,7 +858,7 @@ public class Status : MonoBehaviour
             }
             count++;
         }
-        if (ReceiveChara3 != null && ReceiveChara1.GetComponent<Status>().GetState() != STATE.ST_DEAD)
+        if (ReceiveChara3 != null && ReceiveChara3.GetComponent<Status>().GetState() != STATE.ST_DEAD)
         {
             if(!rec1)
             {

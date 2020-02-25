@@ -17,7 +17,7 @@ MonoBehaviour:
     list:
     - stage: 11
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 3
       enemy1: 1
       enemy2: 2
       enemy3: 6
@@ -30,7 +30,7 @@ MonoBehaviour:
       EXP: 100
     - stage: 12
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 3
       enemy1: 1
       enemy2: 2
       enemy3: 6
@@ -43,7 +43,7 @@ MonoBehaviour:
       EXP: 150
     - stage: 13
       enemy_count: 1
-      extra: BOSS
+      enemy_typeCount: 1
       enemy1: 7
       enemy2: 0
       enemy3: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
       EXP: 300
     - stage: 21
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 1
       enemy2: 6
       enemy3: 3
@@ -69,7 +69,7 @@ MonoBehaviour:
       EXP: 200
     - stage: 22
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 1
       enemy2: 6
       enemy3: 3
@@ -82,7 +82,7 @@ MonoBehaviour:
       EXP: 300
     - stage: 23
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 1
       enemy2: 6
       enemy3: 3
@@ -95,7 +95,7 @@ MonoBehaviour:
       EXP: 400
     - stage: 24
       enemy_count: 1
-      extra: BOSS
+      enemy_typeCount: 1
       enemy1: 8
       enemy2: 0
       enemy3: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
       EXP: 800
     - stage: 31
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 9
       enemy2: 10
       enemy3: 11
@@ -121,7 +121,7 @@ MonoBehaviour:
       EXP: 700
     - stage: 32
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 9
       enemy2: 10
       enemy3: 11
@@ -134,7 +134,7 @@ MonoBehaviour:
       EXP: 800
     - stage: 33
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 9
       enemy2: 10
       enemy3: 11
@@ -147,7 +147,7 @@ MonoBehaviour:
       EXP: 900
     - stage: 34
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 5
       enemy1: 9
       enemy2: 10
       enemy3: 11
@@ -160,7 +160,7 @@ MonoBehaviour:
       EXP: 1000
     - stage: 35
       enemy_count: 1
-      extra: BOSS
+      enemy_typeCount: 1
       enemy1: 15
       enemy2: 0
       enemy3: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
       EXP: 2000
     - stage: 41
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 8
       enemy1: 13
       enemy2: 14
       enemy3: 16
@@ -186,7 +186,7 @@ MonoBehaviour:
       EXP: 1500
     - stage: 42
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 8
       enemy1: 13
       enemy2: 14
       enemy3: 16
@@ -199,7 +199,7 @@ MonoBehaviour:
       EXP: 1600
     - stage: 43
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 8
       enemy1: 13
       enemy2: 14
       enemy3: 16
@@ -212,7 +212,7 @@ MonoBehaviour:
       EXP: 1700
     - stage: 44
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 8
       enemy1: 13
       enemy2: 14
       enemy3: 16
@@ -225,7 +225,7 @@ MonoBehaviour:
       EXP: 1800
     - stage: 45
       enemy_count: 3
-      extra: 
+      enemy_typeCount: 8
       enemy1: 13
       enemy2: 14
       enemy3: 16
@@ -238,7 +238,7 @@ MonoBehaviour:
       EXP: 1900
     - stage: 46
       enemy_count: 1
-      extra: BOSS
+      enemy_typeCount: 1
       enemy1: 22
       enemy2: 0
       enemy3: 0

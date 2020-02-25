@@ -121,6 +121,7 @@ public class BattleScene : MonoBehaviour
             }
             BFinish.GetComponent<Image>().enabled = true;
             sceneNavigator.GetComponent<StatusControl>().AddChar();
+
         }
         //  プレイヤーが全滅した時の処理
         else if (!GetComponent<command>().PlayerAlive())
@@ -261,6 +262,8 @@ public class BattleScene : MonoBehaviour
                 }
                 receiveChara1.GetComponent<Status>().SetHP(receiveChara1.GetComponent<Status>().GetHP() - TotalDamage1);
 
+                receiveChara1.GetComponent<Status>().DaText(TotalDamage1);
+
                 Debug.Log(attackChara.gameObject.name + "が" + receiveChara1.gameObject.name + "に" + TotalDamage1 + "ダメージ！");
                 Debug.Log("残りHP" + receiveChara1.GetComponent<Status>().GetHP());
                 receiveChara1.GetComponent<Status>().SetState(Status.STATE.ST_DAMAGE);
@@ -291,6 +294,9 @@ public class BattleScene : MonoBehaviour
                     TotalDamage2 = 1;
                 }
                 receiveChara2.GetComponent<Status>().SetHP(receiveChara2.GetComponent<Status>().GetHP() - TotalDamage2);
+
+                receiveChara2.GetComponent<Status>().DaText(TotalDamage2);
+
                 Debug.Log(attackChara.gameObject.name + "が" + receiveChara2.gameObject.name + "に" + TotalDamage2 + "ダメージ！");
                 Debug.Log("残りHP" + receiveChara2.GetComponent<Status>().GetHP());
                 receiveChara2.GetComponent<Status>().SetState(Status.STATE.ST_DAMAGE);
@@ -321,6 +327,9 @@ public class BattleScene : MonoBehaviour
                     TotalDamage3 = 1;
                 }
                 receiveChara3.GetComponent<Status>().SetHP(receiveChara3.GetComponent<Status>().GetHP() - TotalDamage3);
+
+                receiveChara3.GetComponent<Status>().DaText(TotalDamage3);
+
                 Debug.Log(attackChara.gameObject.name + "が" + receiveChara3.gameObject.name + "に" + TotalDamage3 + "ダメージ！");
                 Debug.Log("残りHP" + receiveChara3.GetComponent<Status>().GetHP());
                 receiveChara3.GetComponent<Status>().SetState(Status.STATE.ST_DAMAGE);
@@ -340,6 +349,7 @@ public class BattleScene : MonoBehaviour
             {
                 battleManager.GetComponent<BattleScene>().SetAllEffect(receiveChara3.name);
             }
+
         }
     }
 
@@ -372,6 +382,8 @@ public class BattleScene : MonoBehaviour
                 }
                 receiveChara1.GetComponent<Status>().SetHP(receiveChara1.GetComponent<Status>().GetHP() + TotalHeal1);
 
+                receiveChara1.GetComponent<Status>().CuText(TotalHeal1);
+
                 Debug.Log(receiveChara1.gameObject.name + "のHPが" + TotalHeal1 + "かいふく！");
                 Debug.Log("残りHP" + receiveChara1.GetComponent<Status>().GetHP());
                 battleManager.GetComponent<BattleScene>().SetEffect(receiveChara1.name);
@@ -386,6 +398,8 @@ public class BattleScene : MonoBehaviour
                 }
                 receiveChara2.GetComponent<Status>().SetHP(receiveChara2.GetComponent<Status>().GetHP() + TotalHeal2);
 
+                receiveChara2.GetComponent<Status>().CuText(TotalHeal2);
+
                 Debug.Log(receiveChara2.gameObject.name + "のHPが" + TotalHeal2 + "かいふく！");
                 Debug.Log("残りHP" + receiveChara2.GetComponent<Status>().GetHP());
                 battleManager.GetComponent<BattleScene>().SetEffect(receiveChara2.name);
@@ -399,6 +413,8 @@ public class BattleScene : MonoBehaviour
                     TotalHeal3 = 1;
                 }
                 receiveChara3.GetComponent<Status>().SetHP(receiveChara1.GetComponent<Status>().GetHP() + TotalHeal3);
+
+                receiveChara3.GetComponent<Status>().CuText(TotalHeal3);
 
                 Debug.Log(receiveChara3.gameObject.name + "のHPが" + TotalHeal3 + "かいふく！");
                 Debug.Log("残りHP" + receiveChara3.GetComponent<Status>().GetHP());

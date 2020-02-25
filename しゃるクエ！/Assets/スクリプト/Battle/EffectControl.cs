@@ -28,8 +28,6 @@ public class EffectControl : MonoBehaviour
 
     public void SetAnim()
     {
-
-
         //  単体攻撃
         if (animName == "ひっかく")
         {

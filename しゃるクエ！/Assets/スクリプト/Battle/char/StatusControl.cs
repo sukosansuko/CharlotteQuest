@@ -72,10 +72,10 @@ public class StatusControl : MonoBehaviour
         for (int charID = 0; charID < 6; charID++)
         {
             StatusList[charID] = new statusData(){
-                                                    CharName = PC.sheets[0].list[charID].Name, LV = 99,   HP = (int)PC.sheets[0].list[charID].HP,        SP = (int)PC.sheets[0].list[charID].SP,
+                                                    CharName = PC.sheets[0].list[charID].Name, LV = 3,   HP = (int)PC.sheets[0].list[charID].HP,        SP = (int)PC.sheets[0].list[charID].SP,
                                                     ATK = (int)PC.sheets[0].list[charID].ATK,            DEF = (int)PC.sheets[0].list[charID].DEF,
                                                     SPD = (int)PC.sheets[0].list[charID].SPD,            MAT = (int)PC.sheets[0].list[charID].MAT,
-                                                    MDF = (int)PC.sheets[0].list[charID].MDF,            LUK = (int)PC.sheets[0].list[charID].LUK,      EXP = 1200
+                                                    MDF = (int)PC.sheets[0].list[charID].MDF,            LUK = (int)PC.sheets[0].list[charID].LUK,      EXP = 220
             };
 
             StatusGrowList[charID] = new statusData(){
@@ -314,10 +314,13 @@ public class StatusControl : MonoBehaviour
     //  任意のキャラクターを仲間にする(既に仲間になっていたらfalseを返す)
     public bool AddChar()
     {
-        if(!FindChar(addCharID))
+        if (addCharID != 0)
         {
-            playerList.Add(addCharID);
-            return true;
+            if (!FindChar(addCharID))
+            {
+                playerList.Add(addCharID);
+                return true;
+            }
         }
 
         //  初期化
