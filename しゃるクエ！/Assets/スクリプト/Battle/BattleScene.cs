@@ -122,6 +122,9 @@ public class BattleScene : MonoBehaviour
             BFinish.GetComponent<Image>().enabled = true;
             sceneNavigator.GetComponent<StatusControl>().AddChar();
 
+            //  ここにオートセーブを入れる
+            sceneNavigator.GetComponent<StatusControl>().SaveChara();
+
         }
         //  プレイヤーが全滅した時の処理
         else if (!GetComponent<command>().PlayerAlive())

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 using System;
 
 
@@ -26,6 +27,9 @@ public class StatusControl : MonoBehaviour
     private playerGrow PG;
     private EXP_List EL;
 
+    private gameData gData;
+    
+
     //  ステータス格納用
     statusData[] StatusList = new statusData[6];
 
@@ -49,16 +53,31 @@ public class StatusControl : MonoBehaviour
 
     void Start()
     {
+        gData = new gameData();
+
         StatusInit();
+
         playerList.Add(1);
         playerList.Add(2);
         playerList.Add(3);
-        //playerList.Add(4);
-        //playerList.Add(5);
-        //playerList.Add(6);
 
         addCharID = 0;
 
+        //  セーブデータが存在する場合
+        if (PlayerPrefs.HasKey("SaveStageID"))
+        {
+            Debug.Log("あああああああああああああ");
+            for (int charID = 0; charID < 6; charID++)
+            {
+                StatusList[charID].LV = this.GetComponent<gameData>().GetSaveLV(charID);
+                StatusList[charID].EXP = this.GetComponent<gameData>().GetSaveEXP(charID);
+            }
+        }
+        //  セーブデータが存在しない場合
+        else
+        {
+            Debug.Log("iiiiiiiiiiiiiiiiiiiiiiiiii");
+        }
         stageID = 1;
         BGMID = 1;
     }
@@ -71,42 +90,35 @@ public class StatusControl : MonoBehaviour
         //  レベル1時の初期ステータスを取得
         for (int charID = 0; charID < 6; charID++)
         {
-            StatusList[charID] = new statusData(){
-                                                    CharName = PC.sheets[0].list[charID].Name, LV = 3,   HP = (int)PC.sheets[0].list[charID].HP,        SP = (int)PC.sheets[0].list[charID].SP,
-                                                    ATK = (int)PC.sheets[0].list[charID].ATK,            DEF = (int)PC.sheets[0].list[charID].DEF,
-                                                    SPD = (int)PC.sheets[0].list[charID].SPD,            MAT = (int)PC.sheets[0].list[charID].MAT,
-                                                    MDF = (int)PC.sheets[0].list[charID].MDF,            LUK = (int)PC.sheets[0].list[charID].LUK,      EXP = 220
+            StatusList[charID] = new statusData()
+            {
+                CharName = PC.sheets[0].list[charID].Name,
+                LV = 3,
+                HP = (int)PC.sheets[0].list[charID].HP,
+                SP = (int)PC.sheets[0].list[charID].SP,
+                ATK = (int)PC.sheets[0].list[charID].ATK,
+                DEF = (int)PC.sheets[0].list[charID].DEF,
+                SPD = (int)PC.sheets[0].list[charID].SPD,
+                MAT = (int)PC.sheets[0].list[charID].MAT,
+                MDF = (int)PC.sheets[0].list[charID].MDF,
+                LUK = (int)PC.sheets[0].list[charID].LUK,
+                EXP = 220
             };
 
-            StatusGrowList[charID] = new statusData(){
-                                                    LV = 1,HP = (int)PG.sheets[0].list[charID].GROWHP,  SP = (int)PG.sheets[0].list[charID].GROWSP,
-                                                    ATK = (int)PG.sheets[0].list[charID].GROWATK,       DEF = (int)PG.sheets[0].list[charID].GROWDEF,
-                                                    SPD = (int)PG.sheets[0].list[charID].GROWSPD,       MAT = (int)PG.sheets[0].list[charID].GROWMAT,
-                                                    MDF = (int)PG.sheets[0].list[charID].GROWMDF,       LUK = (int)PG.sheets[0].list[charID].GROWLUK, EXP = 0
-                                                 };
+            StatusGrowList[charID] = new statusData()
+            {
+                LV = 1,
+                HP = (int)PG.sheets[0].list[charID].GROWHP,
+                SP = (int)PG.sheets[0].list[charID].GROWSP,
+                ATK = (int)PG.sheets[0].list[charID].GROWATK,
+                DEF = (int)PG.sheets[0].list[charID].GROWDEF,
+                SPD = (int)PG.sheets[0].list[charID].GROWSPD,
+                MAT = (int)PG.sheets[0].list[charID].GROWMAT,
+                MDF = (int)PG.sheets[0].list[charID].GROWMDF,
+                LUK = (int)PG.sheets[0].list[charID].GROWLUK,
+                EXP = 0
+            };
         }
-
-        //Debug.Log(StatusList[1].LV);
-        //Debug.Log(StatusList[1].HP);
-        //Debug.Log(StatusList[1].SP);
-        //Debug.Log(StatusList[1].ATK);
-        //Debug.Log(StatusList[1].DEF);
-        //Debug.Log(StatusList[1].SPD);
-        //Debug.Log(StatusList[1].MAT);
-        //Debug.Log(StatusList[1].MDF);
-        //Debug.Log(StatusList[1].LUK);
-        //Debug.Log(StatusList[1].EXP);
-
-        //Debug.Log("StatusGrow   " + StatusGrowList[1].LV);
-        //Debug.Log(StatusGrowList[1].HP);
-        //Debug.Log(StatusGrowList[1].SP);
-        //Debug.Log(StatusGrowList[1].ATK);
-        //Debug.Log(StatusGrowList[1].DEF);
-        //Debug.Log(StatusGrowList[1].SPD);
-        //Debug.Log(StatusGrowList[1].MAT);
-        //Debug.Log(StatusGrowList[1].MDF);
-        //Debug.Log(StatusGrowList[1].LUK);
-        //Debug.Log(StatusGrowList[1].EXP);
     }
 
     void Update()
@@ -331,5 +343,18 @@ public class StatusControl : MonoBehaviour
     public void SetAddCharID(int _charID)
     {
         addCharID = _charID;
+    }
+
+    //  セーブ用
+    public void SaveChara()
+    {
+        for (int charID = 0; charID < 6; charID++)
+        {
+            this.GetComponent<gameData>().SetSaveLV(charID, StatusList[charID].LV);
+            this.GetComponent<gameData>().SetSaveEXP(charID, StatusList[charID].EXP);
+        }
+        this.GetComponent<gameData>().SetSaveStageID(1);
+        PlayerPrefs.Save();
+        Debug.Log("アーデンさん！？" + PlayerPrefs.GetInt("SaveStageID", -1));
     }
 }

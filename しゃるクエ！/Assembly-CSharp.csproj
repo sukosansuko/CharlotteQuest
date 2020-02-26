@@ -53,23 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\AnimComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\AudioComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\BgComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\ButtonComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\CharaComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\ClickableComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\Components.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\Doc.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\EventComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\ImageComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\Live2dComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\MenuComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\MessageComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\SaveComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\SdComponentScript.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\SystemComponent.cs" />
-     <Compile Include="Assets\JOKER\Scripts\Novel\Components\TextComponent.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Core\AudioManager.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Core\Enum.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Core\EventManager.cs" />
@@ -84,6 +67,23 @@
      <Compile Include="Assets\JOKER\Scripts\Novel\Core\StatusManager.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Core\Validate.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Libs\ColorConverter.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\AnimComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\AudioComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\BgComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\ButtonComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\CharaComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\ClickableComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\Components.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\Doc.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\EventComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\ImageComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\Live2dComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\MenuComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\MessageComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\SaveComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\SdComponentScript.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\SystemComponent.cs" />
+     <Compile Include="Assets\JOKER\Scripts\Novel\Libs\Components\TextComponent.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Libs\GuiScaler.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Libs\iTween.cs" />
      <Compile Include="Assets\JOKER\Scripts\Novel\Libs\MiniJSON.cs" />
@@ -139,6 +139,7 @@
      <Compile Include="Assets\スクリプト\changeImage.cs" />
      <Compile Include="Assets\スクリプト\charaChange\charaFaceChange.cs" />
      <Compile Include="Assets\スクリプト\formationManager.cs" />
+     <Compile Include="Assets\スクリプト\gameData.cs" />
      <Compile Include="Assets\スクリプト\invisible.cs" />
      <Compile Include="Assets\スクリプト\move.cs" />
      <Compile Include="Assets\スクリプト\notDiscard.cs" />

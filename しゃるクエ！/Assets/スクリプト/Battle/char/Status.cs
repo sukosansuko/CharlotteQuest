@@ -155,8 +155,6 @@ public class Status : MonoBehaviour
     {
         Name = this.gameObject.name;
 
-        Debug.Log(Name);
-
         battleManager = GameObject.Find("BattleManager");
         sceneNavigator = GameObject.Find("SceneNavigator");
 
