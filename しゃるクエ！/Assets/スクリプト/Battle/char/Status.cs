@@ -127,7 +127,7 @@ public class Status : MonoBehaviour
     public int charID;
 
     //  TL上の進行度
-    public float TLProgress;
+    public double TLProgress;
     private bool progressEnd;
 
     public STATE state;
@@ -373,7 +373,7 @@ public class Status : MonoBehaviour
     private void TLManager()
     {
         Vector3 pos = TLIcon.transform.position;
-        pos = new Vector3(tmp.x + TLProgress / 40, tmp.y, tmp.z);
+        pos = new Vector3(tmp.x + (float)TLProgress / 50, tmp.y, tmp.z);
         TLIcon.transform.position = pos;
 
         //  ActiveChooseがtrueの間は進行度は増えない
@@ -391,10 +391,16 @@ public class Status : MonoBehaviour
                 TLProgress += ProgressSPD;
             }
 
+
+            string colName = TLIcon.GetComponent<ObjCollision>().GetExitName();
+
             //  行動選択開始
-            if (TLProgress >= 200 && !progressEnd)
+            //if (TLProgress >= 200 && !progressEnd)
+            //{
+            if (colName == "TL1" && !progressEnd)
             {
-                TLProgress = 200;
+                //TLProgress = 200;
+
 
                 if (playerProof)
                 {
@@ -415,8 +421,12 @@ public class Status : MonoBehaviour
                 progressEnd = true;
             }
 
+            colName = TLIcon.GetComponent<ObjCollision>().GetExitName();
+
             //  行動開始
-            if (TLProgress >= 300)
+            //if (TLProgress >= 300)
+            //{
+            if(colName == "TL2")
             {
                 waitTime++;
                 if (!actionFlag)
@@ -447,46 +457,6 @@ public class Status : MonoBehaviour
 
                     actionFlag = true;
                 }
-
-
-                if (waitTime >= 80)
-                {
-                    battleManager.GetComponent<command>().ActionEnd();
-                    if (ReceiveChara1 != null)
-                    {
-                        ReceiveChara1.GetComponent<Status>().DelDaText();
-                        if(ReceiveChara1.GetComponent<Status>().GetHP() <= 0)
-                        {
-                            ReceiveChara1.GetComponent<Status>().Dead();
-                        }
-                    }
-                    if (ReceiveChara2 != null)
-                    {
-                        ReceiveChara2.GetComponent<Status>().DelDaText();
-                        if (ReceiveChara2.GetComponent<Status>().GetHP() <= 0)
-                        {
-                            ReceiveChara2.GetComponent<Status>().Dead();
-                        }
-                    }
-                    if (ReceiveChara3 != null)
-                    {
-                        ReceiveChara3.GetComponent<Status>().DelDaText();
-                        if (ReceiveChara3.GetComponent<Status>().GetHP() <= 0)
-                        {
-                            ReceiveChara3.GetComponent<Status>().Dead();
-                        }
-                    }
-
-                    TLProgress = 0;
-                    actionFlag = false;
-                    progressEnd = false;
-                    battleManager.GetComponent<BattleScene>().SetActionFlag(false);
-                    waitTime = 0;
-                    CheckBuff();
-                    battleManager.GetComponent<command>().changeColor(color1);
-
-                    battleManager.GetComponent<BattleScene>().SetReceiveObj(null, null, null);
-                }
             }
 
 
@@ -498,6 +468,51 @@ public class Status : MonoBehaviour
                     turnPointer.GetComponent<Image>().enabled = false;
                 }
             }
+            TLIcon.GetComponent<ObjCollision>().ResetEnter();
+            TLIcon.GetComponent<ObjCollision>().ResetExit();
+        }
+
+        if (waitTime != 0)
+        {
+            waitTime++;
+        }
+        if (waitTime >= 80)
+        {
+            battleManager.GetComponent<command>().ActionEnd();
+            if (ReceiveChara1 != null)
+            {
+                ReceiveChara1.GetComponent<Status>().DelDaText();
+                if (ReceiveChara1.GetComponent<Status>().GetHP() <= 0)
+                {
+                    ReceiveChara1.GetComponent<Status>().Dead();
+                }
+            }
+            if (ReceiveChara2 != null)
+            {
+                ReceiveChara2.GetComponent<Status>().DelDaText();
+                if (ReceiveChara2.GetComponent<Status>().GetHP() <= 0)
+                {
+                    ReceiveChara2.GetComponent<Status>().Dead();
+                }
+            }
+            if (ReceiveChara3 != null)
+            {
+                ReceiveChara3.GetComponent<Status>().DelDaText();
+                if (ReceiveChara3.GetComponent<Status>().GetHP() <= 0)
+                {
+                    ReceiveChara3.GetComponent<Status>().Dead();
+                }
+            }
+
+            TLProgress = 0;
+            actionFlag = false;
+            progressEnd = false;
+            battleManager.GetComponent<BattleScene>().SetActionFlag(false);
+            waitTime = 0;
+            CheckBuff();
+            battleManager.GetComponent<command>().changeColor(color1);
+
+            battleManager.GetComponent<BattleScene>().SetReceiveObj(null, null, null);
         }
     }
 

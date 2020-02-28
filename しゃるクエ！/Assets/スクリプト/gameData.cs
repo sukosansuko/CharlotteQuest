@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class gameData : MonoBehaviour
 {
-    private string savePass = "data";
-
-    //  キャラクターのレベル
-    //  キャラクターの経験値
-    //  加入している仲間
-    //  クリアしているステージ
-
-
+    //  それぞれのキャラクターのレベル
     public int GetSaveLV(int id)
     {
         return PlayerPrefs.GetInt("SaveLV" + id, 1);
@@ -22,6 +15,8 @@ public class gameData : MonoBehaviour
         PlayerPrefs.SetInt("SaveLV" + id, number);
     }
 
+
+    //  それぞれのキャラクターの経験値
     public int GetSaveEXP(int id)
     {
         return PlayerPrefs.GetInt("SaveEXP" + id, 1);
@@ -32,24 +27,28 @@ public class gameData : MonoBehaviour
         PlayerPrefs.SetInt("SaveEXP" + id, number);
     }
 
-    public int GetSaveChara()
+
+    //  そのキャラクターが加入しているかどうか
+    public int GetSaveChara(int id)
     {
-        return PlayerPrefs.GetInt("SaveChara", -1);
+        return PlayerPrefs.GetInt("SaveChara" + id, -1);
     }
 
-    public void SetSaveChara(int id)
+    public void SetSaveChara(int id, int number)
     {
-        PlayerPrefs.SetInt("SaveChara", id);
+        PlayerPrefs.SetInt("SaveChara" + id, number);
     }
 
-    public int GetSaveStageID()
+
+    //  そのステージをクリアしているかどうか
+    public int GetSaveStage(int id)
     {
-        return PlayerPrefs.GetInt("SaveStageID",-1);
+        return PlayerPrefs.GetInt("SaveStage" + id,-1);
     }
 
-    public void SetSaveStageID(int id)
+    public void SetSaveStage(int id, int number)
     {
-        PlayerPrefs.SetInt("SaveStageID", id);
+        PlayerPrefs.SetInt("SaveStage" + id, number);
     }
 
 

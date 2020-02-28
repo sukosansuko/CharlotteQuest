@@ -163,7 +163,6 @@ public class battleMass : MonoBehaviour {
                     default:
                         break;
                 }
-                Debug.Log("ああああああああああああああああああああ" + num);
                 if (i == 0)
                 {
                     enemy1 = num;

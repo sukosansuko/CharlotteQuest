@@ -127,6 +127,7 @@
      <Compile Include="Assets\スクリプト\Battle\EffectControl.cs" />
      <Compile Include="Assets\スクリプト\Battle\EnemyAction.cs" />
      <Compile Include="Assets\スクリプト\Battle\HPText.cs" />
+     <Compile Include="Assets\スクリプト\Battle\ObjCollision.cs" />
      <Compile Include="Assets\スクリプト\Battle\StatusWindow.cs" />
      <Compile Include="Assets\スクリプト\Battle\TextTarget.cs" />
      <Compile Include="Assets\スクリプト\Button\adventureButton.cs" />

@@ -57,26 +57,42 @@ public class StatusControl : MonoBehaviour
 
         StatusInit();
 
-        playerList.Add(1);
-        playerList.Add(2);
-        playerList.Add(3);
-
         addCharID = 0;
 
         //  セーブデータが存在する場合
-        if (PlayerPrefs.HasKey("SaveStageID"))
+        if (PlayerPrefs.HasKey("SaveChara1"))
         {
-            Debug.Log("あああああああああああああ");
+            Debug.Log("つづきから");
             for (int charID = 0; charID < 6; charID++)
             {
                 StatusList[charID].LV = this.GetComponent<gameData>().GetSaveLV(charID);
                 StatusList[charID].EXP = this.GetComponent<gameData>().GetSaveEXP(charID);
+
+                if(this.GetComponent<gameData>().GetSaveChara(charID) == 1)
+                {
+                    playerList.Add(charID + 1);
+                }
             }
         }
         //  セーブデータが存在しない場合
         else
         {
-            Debug.Log("iiiiiiiiiiiiiiiiiiiiiiiiii");
+            Debug.Log("はじめから");
+
+            for (int charID = 1; charID < 7; charID++)
+            {
+                if(charID <= 3)
+                {
+                    playerList.Add(charID);
+                    this.GetComponent<gameData>().SetSaveChara(charID - 1, 1);
+                }
+                else
+                {
+                    this.GetComponent<gameData>().SetSaveChara(charID - 1, 0);
+                }
+            }
+
+            SaveChara();
         }
         stageID = 1;
         BGMID = 1;
@@ -331,6 +347,8 @@ public class StatusControl : MonoBehaviour
             if (!FindChar(addCharID))
             {
                 playerList.Add(addCharID);
+                this.GetComponent<gameData>().SetSaveChara(addCharID,1);
+                PlayerPrefs.Save();
                 return true;
             }
         }
@@ -353,8 +371,7 @@ public class StatusControl : MonoBehaviour
             this.GetComponent<gameData>().SetSaveLV(charID, StatusList[charID].LV);
             this.GetComponent<gameData>().SetSaveEXP(charID, StatusList[charID].EXP);
         }
-        this.GetComponent<gameData>().SetSaveStageID(1);
+        this.GetComponent<gameData>().SetSaveStage(1,1);
         PlayerPrefs.Save();
-        Debug.Log("アーデンさん！？" + PlayerPrefs.GetInt("SaveStageID", -1));
     }
 }
